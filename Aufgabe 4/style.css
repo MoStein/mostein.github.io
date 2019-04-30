@@ -36,8 +36,7 @@ li{
 main{
     width: 75%;
     position: relative;
-    margin-left: 25%;
-    margin-right: 25;
+    margin-left: 10%;
 }
 aside :hover{
     text-align: right;
@@ -67,6 +66,13 @@ article{
     width: 25%;
     float: left;
     margin: 1em;
+}
+img{
+    width: 100%;
+    border: #FFFFFF;
+    border-radius: 10%;
+    border: 0,5em;
+}
 }
 #Brexit{
     width: 100%;
