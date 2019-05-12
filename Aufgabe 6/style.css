@@ -60,8 +60,9 @@ ul{
     text-decoration: none;
 }
 ul:hover{
-    background-color: #610B0B;
-    color: #FFFFFF
+    background-color: #424242;
+    color: #FFFFFF;
+    display: block;
 }
 li{
         display: block;
@@ -72,8 +73,8 @@ li{
     
 li:hover{
     display: block;
-    background-color: #424242;
-    height: 5em;
+    background-color: #610B0B;
+   
 }
 a {
     text-decoration: none;
