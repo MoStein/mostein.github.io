@@ -152,12 +152,41 @@ footer{
     
 }
 /*Handy Variante*/
-@media (min-width:63em);
-
+@media only screen and (max-width:40em){
+    main {
+        width: 95%;
+        margin-left: 10%;
+        margin-top: 5em;
+    }
+    article:nth-of-type(2n+1) {
+        width: 90%;
+    }
+    aside {
+        margin-left: 7em;
+    }
+    }
 /*Tablet Variante*/
-@media (min-width:90em);
-
-/*Desktop Variabte*/
-@media (min-width:140em);
-
-@media (min-width:)
+@media only screen and (min-width:40em){
+    main {
+        width:90%;   
+    }
+    article {
+        width: 40%;
+    }
+    aside{
+        margin-top: 135em;
+        margin-left: 6em;
+    }
+}
+/*Desktop Variante*/
+@media only screen and (min-width:63em){
+    main {
+        width: 75%;
+    }
+    article{
+        width: 25%;
+    }
+    aside{
+        margin-top: 5em;
+    }
+}
