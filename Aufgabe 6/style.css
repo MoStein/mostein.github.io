@@ -164,6 +164,13 @@ footer{
     aside {
         margin-left: 7em;
     }
+    #Burger {
+        width:10%;
+    }
+    nav {
+        font-size: 1em;
+    }
+    ul {margin-top:1.5em;}
     }
 /*Tablet Variante*/
 @media only screen and (min-width:40em){
