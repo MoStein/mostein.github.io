@@ -42,9 +42,9 @@ let playerName : string = "Spielername";                                        
 let playerXP : number = 0;                                                         // Stellt die gesammelte Erfahrung des Spielers dar.
 let playerXPperLevel : number = 500;                                                // Da es nur einen Spieler gibt, ergibt sich noch nicht viel Sinn darin, für den Spieler ein interface (im Sinne der Programmierung) zu erstellen.
 // Mehrere Arrays, welche jeweils Bauteile für Namen oder Eigenschaften der Monster beinhalten.
-let prefix : string[] = ["Wald-", "Seuchen-", "Uralte(s) ", "Gift-", "Brennende(s) ", "Kniescheibenzertrümmernde(s) ", "Eiternde(s)", "Alkoholisierte(s)", "Höllen", "Altersgeschwächte(s)", "madige(s)"]; // length = 11, da 11 Einträge. Von 0-5.
-let monsterName : string[] = ["Ratte", "Nagetier", "Ungeziefer", "Kralle", "Fisch", "Nacktmul", "Speckmade", "Teufel"]; // length = 8, da 8 Einträge. Von 0-2.
-let suffix : string[] = [" des Verderbens", " aus der Hölle", " der Lethalität", " mit Rheuma", " der Redundanz", " der Zerberstung", "des Todes", "Ohne Kopf", "der Apokalypse", "mit Verachtung", "der Hässlichkeit"]; // length = 11, da hier 11 Einträge sind. Von 0-5.
+let prefix : string[] = ["Wald-", "Seuchen-", "Uralte(s) ", "Gift-", "Brennende(s) ", "Kniescheibenzertrümmernde(s) ", "Eiternde(s)", "Alkoholisierte(s)", "Höllen", "Altersgeschwächte(s)", "madige(s)"]; // length = 11, da 11 Einträge. Von 0-10.
+let monsterName : string[] = ["Ratte", "Nagetier", "Ungeziefer", "Kralle", "Fisch", "Nacktmul", "Speckmade", "Teufel"]; // length = 8, da 8 Einträge. Von 0-7.
+let suffix : string[] = [" des Verderbens", " aus der Hölle", " der Lethalität", " mit Rheuma", " der Redundanz", " der Zerberstung", "des Todes", "Ohne Kopf", "der Apokalypse", "mit Verachtung", "der Hässlichkeit"]; // length = 11, da hier 11 Einträge sind. Von 0-10.
 
 let bildquellen : string [] = ["imgs/Monster 1.jpg", "imgs/Monster 2.png", "imgs/Monster 3.png", "imgs/Monster 4.png"];
 let monsterModifers : string[] = ["Ist nervig", "Linkshänder", "Bier-Connoisseur", "Verfehlt häufig", "Prokrastiniert", "Müde", "Verwirrt", "Wasserscheu", "Bipolar", "Hat Schnupfen", "Verläuft sich oft"]; // Eine Reihe von zufälligen "Verstärkern" für das Monster.
@@ -67,7 +67,7 @@ console.log(monsterArray ); // Gebe das Monster-Array einmal zu beginn aus. Es s
     window.onload = function () {
         document.getElementById("monsterSpawner").addEventListener("click", generateMonster, false);
         updatePlayerLevel(); // Zu Anfang wird durch eine Funktion ein HTML-Element mit Inhalt befüllt.
-       //console.log("" + document.getElementById("monsterSpawner").innerHTML); 
+       console.log(document.getElementById("monsterSpawner").innerHTML); 
        
     };
 
