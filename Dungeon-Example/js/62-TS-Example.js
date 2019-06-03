@@ -8,7 +8,7 @@
 var monsterHolder = "monsterHoldingCell"; // ID für das Haupt-Element, in welchem die Monster sich befinden werden. Wird vielleicht mehrfach in dem Skript gebraucht, deshalb einmalig definitiert.
 var playerName = "Spielername"; // Ein paar globale Variablen, welche den Spieler darstellen.
 var playerXP = 0; // Stellt die gesammelte Erfahrung des Spielers dar.
-var playerXPperLevel = 500; // Da es nur einen Spieler gibt, ergibt sich noch nicht viel Sinn darin, für den Spieler ein interface (im Sinne der Programmierung) zu erstellen.
+var playerXPperLevel = 750; // Da es nur einen Spieler gibt, ergibt sich noch nicht viel Sinn darin, für den Spieler ein interface (im Sinne der Programmierung) zu erstellen.
 // Mehrere Arrays, welche jeweils Bauteile für Namen oder Eigenschaften der Monster beinhalten.
 var prefix = ["Wald-", "Seuchen-", "Uralte(s) ", "Gift-", "Brennende(s) ", "Kniescheibenzertrümmernde(s) ", "Eiternde(s)", "Alkoholisierte(s)", "Höllen", "Altersgeschwächte(s)", "madige(s)"]; // length = 11, da 11 Einträge. Von 0-10.
 var monsterName = ["Ratte", "Nagetier", "Ungeziefer", "Kralle", "Fisch", "Nacktmul", "Speckmade", "Teufel"]; // length = 8, da 8 Einträge. Von 0-7.
@@ -88,8 +88,7 @@ function monsterGenerateHTML() {
 function getRNGNumber(_maxNumber) {
     var rngNumber = Math.random(); // Macht folgendes: Generiere eine zufällige Komma-Zahl zwischen 0 - 1.
     rngNumber = rngNumber * _maxNumber; // Multipliziere diese Zahl mit der Länge des entsprechenden Array (hier: _maxNumber, ein Parameter, siehe in der runden Klammer der Funktion).
-    rngNumber = Math.floor(rngNumber); // Floore diese Zahl, damit diese nun Ganzzahlig ist.
-    rngNumber = 0; // Diese Zeile ist einer der drei Fehler in den Funktionen. Ich bin mal so frei und vermerke das hier. Einfach löschen und alles wird besser.
+    rngNumber = Math.floor(rngNumber); // Floore diese Zahl, damit diese nun Ganzzahlig ist.                                                   // Diese Zeile ist einer der drei Fehler in den Funktionen. Ich bin mal so frei und vermerke das hier. Einfach löschen und alles wird besser.
     return rngNumber; // Gebe diese Zahl zurück, Funktion kann ähnlich einer Variable in Rechnungen genutzt werden.
 }
 // Diese Funktion gibt einen zusammengewürfelten Namen zurück.
