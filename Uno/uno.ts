@@ -5,10 +5,10 @@ newCard: any;
 }
 
 
-let meineKarten: string [] =[];
-let computerKarten: string [] = [];
-let ablageStapel: string [] = [];
-let kartenArray: string [] = [];
+let meineKarten: Karten [] = [];
+let computerKarten: Karten [] = [];
+let ablageStapel: Karten [] = [];
+let kartenArray: Karten [] = [];
 
 window.onload=function(){
 document.getElementById("Stack").addEventListener("click",function(){karteZiehen}, false);
