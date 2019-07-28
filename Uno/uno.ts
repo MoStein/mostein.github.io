@@ -1,7 +1,7 @@
 interface Karten {
-cardColor: string [];
-cardValue: number;
-newCard: any;
+kartenFarbe: string [];
+kartenNummer: number;
+
 }
 
 
