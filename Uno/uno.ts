@@ -1,57 +1,258 @@
 interface Karten {
-cardColor: string [];
-cardValue: number;
-newCard: any;
+    kartenFarbe: string [];
+    kartenWert: number;
+    kartenNummer: string;
+    value: any;
+    color: string;
 }
 
-
-let meineKarten: string [] =[];
-let computerKarten: string [] = [];
-let ablageStapel: string [] = [];
-let kartenArray: string [] = [];
+let meineKarten: Karten [] =[];
+let computerKarten: Karten [] = [];
+let ablageStapel: Karten [] = [];
+let kartenArray: Karten [] = [];
+//let cardColor: string [] = ["blue", "green","yellow","green"];
+//let cartValue: number [] = [0,1,2,3,4,5,6,7,8,9]
 
 window.onload=function(){
 document.getElementById("Stack").addEventListener("click",function(){karteZiehen}, false);
 Austeilen();
+generateKarten();
+cardHTML();
 }
 
-function generateKarten() :any {
-    let value :number;
-    let color :string;
-    for(let i = 1; i <=9; i++){
-        for(let j=0; j < 4; j++){
-        value=i
-            switch(j){
-                case 0:
-                color = "red";
-                break;
-                case 1:
-                color = "blue";
-                break;
-                case 2:
-                color = "green";
-                break;
-                case 3:
-                color = "yellow";
-                break;
-            }
-            let newCard ={
-                cardValue: value,
-                cardColor: color
-            };
-            kartenArray.push();
-        }
-    }
-
+function generateKarten(){
+let b1 ={
+    color: "blue",
+    value: 1,
+    Nummer: 1,
+    kartenNummer: "1",
+};
+kartenArray.push(b1);
 }
-
-function Mischen() :any{
-    kartenArray.sort(function(a, b){
-        return 0.5 - Math.random()});
-        console.log(kartenArray);
+let b2 ={
+    color: "blue",
+    value: 2,
+    Nummer: 2,
+    kartenNummer: "2",
+};
+kartenArray.push(b2);
+let b3 ={
+    color: "blue",
+    value: 3,
+    Nummer: 3,
+    kartenNummer: "3",
+};
+kartenArray.push(b3)
+let b4 ={
+    color: "blue",
+    value: 4,
+    Nummer: 4,
+    kartenNummer: "4",
+};
+kartenArray.push(b4);
+let b5 ={
+    color: "blue",
+    value: 5,
+    Nummer: 5,
+    kartenNummer: "5",
+};
+kartenArray.push(b5);
+let b6 ={
+    color: "blue",
+    value: 6,
+    Nummer: 6,
+    kartenNummer: "6",
+};
+kartenArray.push(b6);
+let b7 ={
+    color: "blue",
+    value: 7,
+    Nummer: 7,
+    kartenNummer: "7",
+};
+kartenArray.push(b7);
+let b8 ={
+    color: "blue",
+    value: 8,
+    Nummer: 8,
+    kartenNummer: "8",
+};
+kartenArray.push(b8);
+let g1 ={
+    color: "green",
+    value: 1,
+    Nummer: 9,
+    kartenNummer: "1",
+};
+kartenArray.push(g1);
 }
+let g2 ={
+    color: "green",
+    value: 2,
+    Nummer: 10,
+    kartenNummer: "2",
+};
+kartenArray.push(g2);
+let g3 ={
+    color: "green",
+    value: 3,
+    Nummer: 11,
+    kartenNummer: "3",
+};
+kartenArray.push(g3)
+let g4 ={
+    color: "green",
+    value: 4,
+    Nummer: 12,
+    kartenNummer: "4",
+};
+kartenArray.push(g4);
+let g5 ={
+    color: "green",
+    value: 5,
+    Nummer: 13,
+    kartenNummer: "5",
+};
+kartenArray.push(g5);
+let g6 ={
+    color: "green",
+    value: 6,
+    Nummer: 14,
+    kartenNummer: "6",
+};
+kartenArray.push(g6);
+let g7 ={
+    color: "green",
+    value: 7,
+    Nummer: 15,
+    kartenNummer: "7",
+};
+kartenArray.push(g7);
+let g8 ={
+    color: "green",
+    value: 8,
+    Nummer: 16,
+    kartenNummer: "8",
+};
+kartenArray.push(g8);
+let y1 ={
+    color: "yellow",
+    value: 1,
+    Nummer: 17,
+    kartenNummer: "1",
+};
+kartenArray.push(y1);
+}
+let y2 ={
+    color: "yellow",
+    value: 2,
+    Nummer: 18,
+    kartenNummer: "2",
+};
+kartenArray.push(y2);
+let y3 ={
+    color: "yellow",
+    value: 3,
+    Nummer: 19,
+    kartenNummer: "3",
+};
+kartenArray.push(y3)
+let y4 ={
+    color: "yellow",
+    value: 4,
+    Nummer: 20,
+    kartenNummer: "4",
+};
+kartenArray.push(y4);
+let y5 ={
+    color: "yellow",
+    value: 5,
+    Nummer: 21,
+    kartenNummer: "5",
+};
+kartenArray.push(y5);
+let y6 ={
+    color: "yellow",
+    value: 6,
+    Nummer: 22,
+    kartenNummer: "6",
+};
+kartenArray.push(y6);
+let y7 ={
+    color: "yellow",
+    value: 7,
+    Nummer: 23,
+    kartenNummer: "7",
+};
+kartenArray.push(y7);
+let y8 ={
+    color: "yellow",
+    value: 8,
+    Nummer: 24,
+    kartenNummer: "8",
+};
+kartenArray.push(y8);
+let r1 ={
+    color: "red",
+    value: 1,
+    Nummer: 25,
+    kartenNummer: "1",
+};
+kartenArray.push(r1);
+}
+let r2 ={
+    color: "red",
+    value: 2,
+    Nummer: 26,
+    kartenNummer: "2",
+};
+kartenArray.push(r2);
+let r3 ={
+    color: "red",
+    value: 3,
+    Nummer: 27,
+    kartenNummer: "3",
+};
+kartenArray.push(r3)
+let r4 ={
+    color: "red",
+    value: 4,
+    Nummer: 28,
+    kartenNummer: "4",
+};
+kartenArray.push(r4);
+let r5 ={
+    color: "red",
+    value: 5,
+    Nummer: 29,
+    kartenNummer: "5",
+};
+kartenArray.push(r5);
+let r6 ={
+    color: "red",
+    value: 6,
+    Nummer: 31,
+    kartenNummer: "6",
+};
+kartenArray.push(r6);
+let r7 ={
+    color: "red",
+    value: 7,
+    Nummer: 32,
+    kartenNummer: "7",
+};
+kartenArray.push(r7);
+let r8 ={
+    color: "red",
+    value: 8,
+    Nummer: 33,
+    kartenNummer: "8",
+};
+kartenArray.push(r8);
+kartenArray.sort(function (a,b){return 0.5 - Math.random();});
+
 function Austeilen(){
-    for(let i = 0; i < 7; i++){
+    for(let i = 0; i < 5; i++){
         computerKarten.push(kartenArray[0]);
         kartenArray.splice(0, 1);
         meineKarten.push(kartenArray[0]);
@@ -59,115 +260,77 @@ function Austeilen(){
     }
     ablageStapel.push(kartenArray[0]);
     kartenArray.splice(0, 1);
-    console.log(meineKarten);
-    console.log(computerKarten);
-    console.log(ablageStapel);
-    console.log(kartenArray);
-    console.log("Die Karten wurden verteilt");
+    cardHTML();
 }
-
-function cardHTML (Cards, Destination, index){
-    let holdingDiv=document.createElement("div");
-    holdingDiv.setAttribute("class", "Karte"+""+ Cards.cardColor);
-    document.getElementById(Destination).appendChild(holdingDiv);
-    let Zahl=document.createAttribute("p");
-    Zahl.setAttribute("class", "kartenNummer");
-    Zahl.innerHTML = ""+Cards.cardValue;
-    holdingDiv.appendChild(Zahl);
-    if (Destination==meineKarten){
-        holdingDiv.addEventListener("click", function(){karteSpielen(Cards, index);}, false);
-    }
-}
-function coveredCard(Cards, Destination, index){
-    let holdingDiv = document.createElement("div")
-    holdingDiv.setAttribute("class", "Cards"+""+"Covered");
-    document.getElementById("Destination").appendChild(holdingDiv);
-}
+    
 
 function karteZiehen (){
-if(checkKarten(meineKarten)==false){
-    meineKarten.push(kartenArray[kartenArray.length - 1]);
-    kartenArray.splice(kartenArray.length -1, 1);
-    updateHTML("Player");
-    updateHTML("CardArea");
-}
-if (checkKarten(meineKarten)==false){
+if(kartenArray.length > 0){
+    meineKarten.push(kartenArray[0]);
+    kartenArray.splice(0, 1);
     computerSpiel();
 }
 }
-function karteSpielen(Cards, index){
-    if (Cards.cardColor == ablageStapel[ablageStapel.length - 1].cardColor ||
-        Cards.cardValue == ablageStapel[ablageStapel.length - 1].cardValue)
-        ablageStapel.push(Cards);
-        meineKarten.splice(index, 1);
-        updateHTML("Player");
-        updateHTML("CardArea");
-        computerSpiel();
+function karteSpielen(Karte){
+    if (meineKarten[Karte].color == ablageStapel[ablageStapel.length - 1].color ||
+        meineKarten[Karte].value == ablageStapel[ablageStapel.length - 1].value){
+            ablageStapel.push(meineKarten[Karte]);
+            cardHTML();
+            computerSpiel();
+        }
+        else{
+            alert("Diese Karte ist nicht spielbar");
+        }
+        if (meineKarten.length == 0){
+            alert ("Herzlichen Glückwunsch");
+        }
 }
 function computerSpiel (){
     
-   let i=0;
-   for(i; i < computerKarten.length;i++){
-       if(computerKarten[i].cardColor == ablageStapel[ablageStapel.length -1].cardColor ||
-        computerKarten[i].cardValue == ablageStapel[ablageStapel.length -1].cardValue){
-            ablageStapel.push(computerKarten[i]);
-            computerKarten.splice(i, 1);
-            updateHTML("CardArea");
-            updateHTML("Computer");
-            break; 
+let playedAlready = false;
+for (let o = 0; o < computerKarten.length; o++){
+    if (computerKarten[o].color == ablageStapel[ablageStapel.length - 1].color ||
+        computerKarten[o].value == ablageStapel[ablageStapel.length - 1].value){
+            ablageStapel.push(computerKarten[o]);
+            playedAlready = true;
+            computerKarten.splice(o, 1);
+            cardHTML();
+            break;
         }
-
+}
+   if (kartenArray.length > 0 && playedAlready == false){
+       computerKarten.push(kartenArray[0]);
+       kartenArray.splice(0, 1);
+       cardHTML();
    }
-   if (i >= computerKarten.length){
-       computerKarten.push(kartenArray[kartenArray.length - 1]);
-       kartenArray.splice(kartenArray.length -1,1);
-       updateHTML("Computer");
-       updateHTML("Stack");
-       if (computerKarten[computerKarten.length - 1].cardColor == ablageStapel[ablageStapel.length].cardColor ||
-        computerKarten[computerKarten.length - 1].cardValue == ablageStapel[ablageStapel.length].cardValue){
-            ablageStapel.push(computerKarten[computerKarten.length - 1]);
-            computerKarten.splice(computerKarten.length -1, 1);
-            updateHTML("CardArea");
-            updateHTML("Computer");
-
-        }
+   if (computerKarten.length == 0){
+       alert("you lost");
    }
 }
-function checkKarten(array){
-    let matchingCard = false;
-    for (let i = 0; i <= array.length; i++){
-        if(array[i].cardColor == ablageStapel[ablageStapel.length - 1].cardColor || 
-            array[i].cardValue == ablageStapel[ablageStapel.length - 1].cardValue){
-                matchingCard = true;
-                break;
-            }
+let playerKarten ="Player";
+function cardHTML(){
+    document.getElementById(playerKarten).innerHTML ="";
+    for (let i = 0; i < meineKarten.length; i++){
+        let holdingDiv = document.createElement("div");
+        holdingDiv.setAttribute("class","Cards");
+        holdingDiv.setAttribute("class", meineKarten[i].color+"");
+        holdingDiv.addEventListener("click", function(){karteSpielen(i);}, false);
+        document.getElementById(playerKarten).appendChild(holdingDiv);
+        let cardValue = document.createElement("p");
+        cardValue.innerHTML = meineKarten[i].kartenNummer
+        holdingDiv.appendChild(cardValue);
     }
-    return matchingCard;
-}
-function updateHTML(Destination){
-    clearHTML(Destination);
-    if (Destination == "Player"){
-        for (let i = 0; i < meineKarten.length; i++){
-            cardHTML(meineKarten[i],"Player",i);
-        }
+    document.getElementById("Computer").innerHTML ="";
+    for (let k = 0; k > computerKarten.length;k++){
+        let holdingDiv = document.createElement("div");
+        holdingDiv.setAttribute("class","Covered");
+        document.getElementById("Computer").appendChild(holdingDiv);
     }
-    if (Destination == "Computer"){
-        for (let i = 0; i < computerKarten.length; i++){
-            coveredCard(computerKarten[i], "Computer", i);
-        }
-    }
-    if (Destination == "CardArea"){
-        cardHTML(ablageStapel[ablageStapel.length - 1], "CardArea", ablageStapel.length -1);
-    }
-    if (Destination == "Stack"){
-        coveredCard(kartenArray[kartenArray.length - 1],"Stack", kartenArray.length -1);
-    }
-
-}
-function clearHTML(Destination){
-    let Element = document.getElementById(Destination);
-    while (Element.firstChild){
-        Element.removeChild(Element.firstChild);
-    }
-
+    document.getElementById("CardArea").innerHTML="";
+    let holdingDiv = document.createElement("div");
+    holdingDiv.setAttribute("class",ablageStapel[ablageStapel.length - 1].color+"";
+    document.getElementById("CardArea").appendChild(holdingDiv);
+    let cardValue = document.createElement("p");
+    cardValue.innerHTML = ablageStapel[ablageStapel.length - 1].kartenNummer;
+    holdingDiv.appendChild(cardValue);
 }
