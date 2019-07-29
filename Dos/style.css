@@ -15,25 +15,25 @@ section {
     background-color: #e6e6e6
     
 }
-section: :nth-last-of-type(4);
+section: :nth-last-of-type(4){
+    clear: both;
+}
+
+p {
+    font-size: 45px;
+}
 
 .blue {
-    background-color: blue;
-    color: black;
-    
-    
+    background-color: blue; 
 }
 .green {
     background-color: green;
-    color: black;
 }
 .yellow {
     background-color: yellow;
-    color: black;
 }
 .red {
     background-color: red;
-    color: black;
 }
 body {
     background-color: burlywood;
@@ -55,8 +55,8 @@ body {
 }
 #CardArea{
     float: left;
-    margin-left: 20%;
-    margin-bottom: 6%;
+    margin-left: 1,5em;
+    margin-bottom: 2em;
     height: 17em;
     width: 10em;
 
@@ -74,6 +74,9 @@ body {
 }
 .Covered{
     background-color: black;
+    height: 27em;
+    width: 10em;
+
 }
 #Stack{
     margin-top: 0em;
@@ -97,4 +100,5 @@ section div {
     width: 10em;
     margin-left: 1em;
     float: left;
+    display: inline;
 } 
