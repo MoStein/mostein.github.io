@@ -2,7 +2,7 @@
 var aufgabe13;
 (function (aufgabe13) {
     //let serverAddress: string = "http://localhost:8100/";
-    let serverAddress = "https://eia22228.herokuapp.com/";
+    let serverAddress = "https://vogelhaus.herokuapp.com/";
     //Den Query zusammenstellen und mit sendRequest(query) an den Server weitergeben
     function insert() {
         let query = "command=insert";

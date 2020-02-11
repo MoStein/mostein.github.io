@@ -1,0 +1,24 @@
+{
+    "name": "vogelhaus",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+      "@types/mongodb": "^3.3.11",
+      "mongodb": "^3.3.4"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "start": "node eia_endabg_2/server/Server.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/MoStein/MoStein.github.io.git"
+    },
+    "author": "JamalUlbricht",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/MoStein/MoStein.github.io/issues"
+    },
+    "homepage": "https://github.com/MoStein/MoStein.github.io#readme"
+  }

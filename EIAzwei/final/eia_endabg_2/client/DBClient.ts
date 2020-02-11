@@ -1,6 +1,6 @@
 namespace aufgabe13 {
     //let serverAddress: string = "http://localhost:8100/";
-    let serverAddress: string = "https://eia22228.herokuapp.com/";
+    let serverAddress: string = "https://vogelhaus.herokuapp.com/";
 
     //Den Query zusammenstellen und mit sendRequest(query) an den Server weitergeben
     export function insert(): void {

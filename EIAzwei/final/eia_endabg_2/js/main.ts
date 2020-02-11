@@ -10,6 +10,7 @@ namespace aufgabe13 {
     export let allesArray: AlleObjekte[] = [];
     let alleVoegel: AlleObjekte[] = [];
     let alleSchneebaelle: AlleObjekte[] = [];
+    let url: string ="https://vogelhaus.herokuapp.com/";
 
     let fps: number = 30;
     let imageData: ImageData;

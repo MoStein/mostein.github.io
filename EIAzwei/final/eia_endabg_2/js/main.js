@@ -9,6 +9,7 @@ var aufgabe13;
     aufgabe13.allesArray = [];
     let alleVoegel = [];
     let alleSchneebaelle = [];
+    let url = "https://vogelhaus.herokuapp.com/";
     let fps = 30;
     let imageData;
     aufgabe13.highscore = 0;
