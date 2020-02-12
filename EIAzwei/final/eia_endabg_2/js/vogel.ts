@@ -2,7 +2,7 @@ namespace aufgabe13 {
     export class vogel extends BewegteDinge {
         ofType: string;
 
-        //malt den kleinen vogel
+        //Vogel wird gezeichnet
         constructor(_x: number, _y: number) {
             super();
             this.x = _x * (20 - 10) + 20;
