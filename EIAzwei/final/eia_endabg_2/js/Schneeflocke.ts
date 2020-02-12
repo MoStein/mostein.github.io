@@ -7,7 +7,7 @@ namespace aufgabe13 {
             this.x = _x * 1000
             this.y = _y * 5000
             this.dx = 0;
-            this.dy = 0.1 * +10;                    //geschwindigkeit blase nach oben // von wo (+ oben)
+            this.dy = 0.1 * +10;                    //geschwindigkeit der Schneeflocke
             this.ofType = "blubberblasen";
         }
 
