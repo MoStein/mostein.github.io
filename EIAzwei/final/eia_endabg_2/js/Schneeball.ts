@@ -17,7 +17,7 @@ namespace aufgabe13 {
         
         }
 
-        //Zeichnen des Schneeballs mit Variablen anstelle von Werten, um die Größe anpassen zu können
+        //Die Anpassung der Grösse des Schneeballs
         draw(): void {
           
 
