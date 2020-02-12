@@ -2,9 +2,9 @@
 namespace aufgabe13 {
     export class Erpel extends BewegteDinge {
         ofType: string;
-        foodLocation: number;  ////Y=580
+        foodLocation: number; 
 
-        //malt den größten Erpel
+        //Der grösste Erpel wird gezeichnet
         constructor(_x: number, _y: number) {
             super();
             this.x = _x * (10 - 5) + 5;
