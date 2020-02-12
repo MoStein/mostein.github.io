@@ -29,7 +29,7 @@ namespace aufgabe13 {
         hintergrund();
         refresh();
 
-        //Hintergrundobjekte zufällig plaziert 
+        //Objekte im Hintergrund werden random platziert
         for (let i: number = 0; i < 50; i++) {
             let x: number = Math.random() * (800 - 200) + 200;
             let y: number = Math.random() * (270 - 120) + 120;
@@ -48,10 +48,10 @@ namespace aufgabe13 {
             schneemannFunktion(x, y);
         }
 
-        canvas.addEventListener("click", hermitdemfutter); //Ruft Futter fallenlassen Funktion auf
+        canvas.addEventListener("click", hermitdemfutter); //Ruft drop food auf
         imageData = crc.getImageData(0, 0, canvas.width, canvas.height);
 
-        //Animierte Objekte im Canvas
+        //Die Objekte die im Canvas erstellt werden
         for (let i: number = 0; i < 50; i++) {
             let schneefall: SchneeFall = new SchneeFall(Math.random(), Math.random());
             allesArray.push(schneefall);
@@ -78,7 +78,7 @@ namespace aufgabe13 {
     }
 
 
-    //Steuerung des Fasenkreutzes durch keydown
+    //Steuerung des Fasenkreutzes 
     function bewegungFadenkreutz(_event: KeyboardEvent): void {
         if (_event.keyCode == 39) { //rechts
             wurfhand.x += 8;
@@ -106,11 +106,11 @@ namespace aufgabe13 {
         }
     }
 
-    // überprüft, ob schneeball mit vogel kollidiert
+    // Trifft der Schneeball den Vogel
     function trifftVogel() {
         for (let i = 0; i < alleSchneebaelle.length; i++) {
             for (let j = 0; j < alleVoegel.length; j++) {
-                // hitbox check
+
                 if (alleSchneebaelle[i].x - 10 > alleVoegel[j].x - 80 && alleSchneebaelle[i].x - 10 < alleVoegel[j].x + 40 && alleSchneebaelle[i].y > alleVoegel[j].y - 25 && alleSchneebaelle[i].y < alleVoegel[j].y + 25) {
                     alleVoegel.splice(j, 1);
                     alleSchneebaelle.splice(i, 1);
@@ -145,7 +145,7 @@ namespace aufgabe13 {
         }
     }
 
-    //Funktion für das Timeout, um diese später nutzen zu können
+    //Zeit-bestimmung
     function setTimeOut(): void {
         timeout = window.setTimeout(update, 1000 / fps);
     }
@@ -168,7 +168,7 @@ namespace aufgabe13 {
         trifftVogel();
     }
 
-    //Alles für den Hintergrund 
+    //Hier wird der Hintergrund gestaltet
     function kies(_x: number, _y: number): void {
         let steine: Path2D = new Path2D();
         crc.lineWidth = 2;
@@ -216,7 +216,7 @@ namespace aufgabe13 {
         let Sonne: Path2D = new Path2D();
         crc.fillStyle = "yellow";
         Sonne.arc(+ 300, 100, 100, 100, Math.PI, 2 * Math.PI);
-        //      X/Y/RADIUS/BOGEN       /2mal pi = 360
+        ///2mal pi = 360
         crc.fill(Sonne);
 
         
@@ -260,41 +260,19 @@ namespace aufgabe13 {
         }
     }
 
-    //Futter fallen lassen bei einem Klick der Maus 
+    //Futter via Maus 
     function hermitdemfutter(_event: MouseEvent): void {
         let xCanvas: number = _event.clientX;
         let yCanvas: number = _event.clientY;
         for (let i: number = 0; i < 10; i++) {
             let nomNom: Foodistsogut = new Foodistsogut(xCanvas, yCanvas);
             allesArray.push(nomNom);
-            ////141 -150 erpel
+            
         }
         for (let i = 0; i < alleVoegel.length; i++) {
             alleVoegel[i].foodLocation = xCanvas;
             alleVoegel[i].findFood();
         }
     }
-/*
-    //Rechnet Highscore 
-    export function highscoreFunk(): void {
-        document.getElementById("highscore").innerHTML = "";
-        let prodElement: HTMLDivElement = document.createElement("div");
-        prodElement.innerHTML = `<div> Dein Highscore: ${highscore}</div>`;
-        document.getElementById("highscore").appendChild(prodElement);
-    }
 
-    //Wird aufgerufen, wenn man stirbt. Der Spieler gibt Namen ein und dieser wird mit Highscore an den Server gegeben
-    export function nameEingeben(): void {
-        window.clearTimeout(timeout);
-        spielerName = prompt("Deine Punkte: " + highscore, "Dein Name");
-        insert();
-        alert("Neues Spiel?");
-        window.location.reload();
-        // document.getElementById("neustart").addEventListener("click", neustart);
-    }
-    
-    // function neustart() {
-    //     window.location.reload();
-    // }
-*/
 } 
