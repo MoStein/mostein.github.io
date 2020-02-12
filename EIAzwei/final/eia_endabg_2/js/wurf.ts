@@ -23,7 +23,7 @@ namespace aufgabe13 {
         
         
         }
-        //Zeichnen des Schneeballs mit Variablen anstelle von Werten, um die Größe anpassen zu können
+        //Schneeball wird gezeichnet 
         draw(): void {
           
             if (this.radius >= 0) {
