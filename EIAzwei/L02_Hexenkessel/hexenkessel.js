@@ -22,5 +22,8 @@ var L03_hexenkessel;
     }
     function submitTrank() {
         console.log("Submit");
+        var reset = document.querySelector("form#myForm");
+        reset.innerHTML = "";
+        alert("Danke für deinen Zaubertrank");
     }
 })(L03_hexenkessel || (L03_hexenkessel = {}));
