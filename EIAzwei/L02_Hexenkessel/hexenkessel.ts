@@ -27,6 +27,9 @@ namespace L03_hexenkessel {
     }
     function submitTrank(){
         console.log("Submit");
+       let reset: HTMLElement = <HTMLElement>document.querySelector("form#myForm");
+       reset.innerHTML = "";
+        alert("Danke für deinen Zaubertrank");
         
     }
     
