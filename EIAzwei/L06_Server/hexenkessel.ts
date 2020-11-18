@@ -51,10 +51,12 @@ namespace L04_hexenkessel {
         let formData: FormData = new FormData(document.forms[1]);
         for (let entry of formData){
             let item: HTMLInputElement = <HTMLInputElement>document.querySelector("[value='" +  entry[1] + "']");
+            if (item.getAttribute("pricceG")){
             let GalleonenPrice: number = Number(item.getAttribute("priceG"));
             let SickelPrice: number = Number(item.getAttribute("priceS"));
             let KnutsPrice: number = Number(item.getAttribute("priceK"));
             display.innerHTML += "Preis: " + GalleonenPrice.value + SickelPrice.value + KnutsPrice.value +"<br>"
+            }
         }
         
 
