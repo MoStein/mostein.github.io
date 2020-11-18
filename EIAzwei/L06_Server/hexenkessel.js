@@ -52,7 +52,7 @@ var L04_hexenkessel;
         let formData = new FormData(document.forms[1]);
         for (let entry of formData) {
             let item = document.querySelector("[value='" + entry[1] + "']");
-            if (item.getAttribute("pricceG")) {
+            if (item.getAttribute("priceG")) {
                 let GalleonenPrice = Number(item.getAttribute("priceG"));
                 let SickelPrice = Number(item.getAttribute("priceS"));
                 let KnutsPrice = Number(item.getAttribute("priceK"));
