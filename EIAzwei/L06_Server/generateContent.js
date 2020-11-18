@@ -17,9 +17,9 @@ var L04_hexenkessel;
         for (let item of _items) {
             let checkbox = document.createElement("input");
             checkbox.type = "checkbox";
-            checkbox.setAttribute("G", item.priceG.toFixed(2));
-            checkbox.setAttribute("S", item.priceS.toFixed(2));
-            checkbox.setAttribute("K", item.priceK.toFixed(2));
+            checkbox.setAttribute("priceG", item.priceG.toFixed(2));
+            checkbox.setAttribute("priceS", item.priceS.toFixed(2));
+            checkbox.setAttribute("priceK", item.priceK.toFixed(2));
             checkbox.value = item.name;
             checkbox.name = _category;
             checkbox.id = item.name;
