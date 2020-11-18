@@ -18,7 +18,7 @@ var L04_hexenkessel;
             let data = JSON.parse(offer);
             L04_hexenkessel.generateContent(data);
             let buttonEins = document.querySelector("button#safeOne");
-            let buttonZwei = document.querySelector("button#safeTwo");
+            let buttonZwei = document.querySelector("button#saveTwo");
             let submit = document.querySelector("button#hexhex");
             buttonEins.addEventListener("click", handleChange);
             buttonZwei.addEventListener("click", handleAnotherChange);
