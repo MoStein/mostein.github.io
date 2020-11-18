@@ -40,7 +40,7 @@ var L04_hexenkessel;
         display.innerHTML = "";
         let formData = new FormData(document.forms[0]);
         for (let entry of formData) {
-            if (entry[0] != "") {
+            if (entry[1] != "") {
                 display.innerHTML += entry[1] + "<br>";
             }
         }
