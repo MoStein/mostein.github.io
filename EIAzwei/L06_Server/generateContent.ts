@@ -1,6 +1,6 @@
 namespace L04_hexenkessel {
     export function generateContent(_data: Data): void {
-        let group: HTMLDivElement | null = null;
+        let group: HTMLDivElement = new HTMLDivElement;
         for (let category in _data){
             let items: item [] = _data[category];
             group.appendChild(createMultiple(items, category));
