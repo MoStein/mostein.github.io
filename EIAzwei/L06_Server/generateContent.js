@@ -1,7 +1,7 @@
 var L04_hexenkessel;
 (function (L04_hexenkessel) {
     function generateContent(_data) {
-        let group = null;
+        let group = new HTMLDivElement;
         for (let category in _data) {
             let items = _data[category];
             group.appendChild(createMultiple(items, category));
