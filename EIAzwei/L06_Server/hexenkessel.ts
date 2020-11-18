@@ -11,7 +11,7 @@ namespace L04_hexenkessel {
         generateContent(data);
 
         let buttonEins : HTMLElement = <HTMLElement>document.querySelector("button#safeOne");
-        let buttonZwei : HTMLElement = <HTMLElement>document.querySelector("button#safeTwo");
+        let buttonZwei : HTMLElement = <HTMLElement>document.querySelector("button#saveTwo");
         let submit : HTMLElement = <HTMLElement>document.querySelector("button#hexhex");
         
         buttonEins.addEventListener("click", handleChange);
