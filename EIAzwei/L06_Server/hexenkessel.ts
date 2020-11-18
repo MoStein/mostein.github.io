@@ -10,7 +10,7 @@ namespace L04_hexenkessel {
 
         generateContent(data);
 
-        let buttonEins : HTMLElement = <HTMLElement>document.querySelector("button#safeOne");
+        let buttonEins : HTMLElement = <HTMLElement>document.querySelector("button#saveOne");
         let buttonZwei : HTMLElement = <HTMLElement>document.querySelector("button#saveTwo");
         let submit : HTMLElement = <HTMLElement>document.querySelector("button#hexhex");
         
