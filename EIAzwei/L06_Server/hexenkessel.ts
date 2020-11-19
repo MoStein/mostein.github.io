@@ -48,6 +48,7 @@ namespace L04_hexenkessel {
         let display: HTMLElement = <HTMLElement>document.querySelector("div#display");
         
         let formData: FormData = new FormData(document.forms[1]);
+        
         for (let entry of formData){
             let item: HTMLInputElement = <HTMLInputElement>document.querySelector("[value='" +  entry[1] + "']");
             if (item.getAttribute("priceG") != null){
