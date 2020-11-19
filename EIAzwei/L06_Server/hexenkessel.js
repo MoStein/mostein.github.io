@@ -48,7 +48,6 @@ var L04_hexenkessel;
     function handleAnotherChange(_event) {
         console.log("Anweisungen");
         let display = document.querySelector("div#display");
-        display.innerHTML = "";
         let formData = new FormData(document.forms[1]);
         for (let entry of formData) {
             let item = document.querySelector("[value='" + entry[1] + "']");
@@ -56,7 +55,7 @@ var L04_hexenkessel;
                 let GalleonenPrice = Number(item.getAttribute("priceG"));
                 let SickelPrice = Number(item.getAttribute("priceS"));
                 let KnutsPrice = Number(item.getAttribute("priceK"));
-                display.innerHTML += "Preis: " + GalleonenPrice.value + SickelPrice.value + KnutsPrice.value + "<br>";
+                display.innerHTML += "Preis: " + GalleonenPrice.value + " Galleonen" + SickelPrice.value + " Sickel" + KnutsPrice.value + " Knuts" + "<br>";
             }
         }
     }
