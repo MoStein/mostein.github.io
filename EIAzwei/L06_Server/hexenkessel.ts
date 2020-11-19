@@ -46,16 +46,15 @@ namespace L04_hexenkessel {
     function handleAnotherChange(_event: MouseEvent): void {
         console.log("Anweisungen");
         let display: HTMLElement = <HTMLElement>document.querySelector("div#display");
-        display.innerHTML = "";
-
+        
         let formData: FormData = new FormData(document.forms[1]);
         for (let entry of formData){
             let item: HTMLInputElement = <HTMLInputElement>document.querySelector("[value='" +  entry[1] + "']");
-            if (item.getAttribute("priceG")!= null){
+            if (item.getAttribute("priceG") != null){
             let GalleonenPrice: number = Number(item.getAttribute("priceG"));
             let SickelPrice: number = Number(item.getAttribute("priceS"));
             let KnutsPrice: number = Number(item.getAttribute("priceK"));
-            display.innerHTML += "Preis: " + GalleonenPrice.value + SickelPrice.value + KnutsPrice.value +"<br>"
+            display.innerHTML += "Preis: " + GalleonenPrice.value + " Galleonen" + SickelPrice.value + " Sickel" + KnutsPrice.value + " Knuts" +"<br>"
             }
         }
         
