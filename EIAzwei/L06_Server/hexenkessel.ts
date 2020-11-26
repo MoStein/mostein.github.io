@@ -1,7 +1,8 @@
 namespace L04_hexenkessel {
-    window.addEventListener("load", hanleLoad);
+    window.addEventListener("load", handleLoad);
+    let url = "https://hyfolia.herokuapp.com/"
 
-    async function hanleLoad(_event: Event): Promise<void>{
+    async function handleLoad(_event: Event): Promise<void>{
         console.log("Start");
 
         let response: Response = await fetch("Data.json");
