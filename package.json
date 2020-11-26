@@ -4,7 +4,7 @@
   "description": "doesstuff",
   "main": "main.js",
   "scripts": {
-    "start": "L06_Server/Server.js"
+    "start": "EIAzwei/L06_Server/Server.js"
   },
   "repository": {
     "type": "git",
