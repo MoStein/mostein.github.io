@@ -2,7 +2,7 @@
   "name": "hyfolia",
   "version": "1.0.0",
   "description": "doesstuff",
-  "main": "main.js",
+  "main": "",
   "scripts": {
     "start": "EIAzwei/L06_Server/Server.js"
   },
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/MoStein/MoStein.github.io#readme",
   "devDependencies": {
-    "@types/node": "^14.14.8"
+    "@types/mongodb": "^14.14.8"
   }
 }
