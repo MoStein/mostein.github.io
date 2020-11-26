@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/MoStein/MoStein.github.io#readme",
   "devDependencies": {
-    "@types/mongodb": "^14.14.8"
+    "@types/node": "^14.14.8"
     
   }
 }
