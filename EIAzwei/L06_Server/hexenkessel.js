@@ -9,8 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 var L04_hexenkessel;
 (function (L04_hexenkessel) {
-    window.addEventListener("load", hanleLoad);
-    function hanleLoad(_event) {
+    window.addEventListener("load", handleLoad);
+    let url = "https://hyfolia.herokuapp.com/";
+    function handleLoad(_event) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("Start");
             let response = yield fetch("Data.json");
