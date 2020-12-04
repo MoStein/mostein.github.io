@@ -21,9 +21,11 @@ var L04_hexenkessel;
             let buttonEins = document.querySelector("button#saveOne");
             let buttonZwei = document.querySelector("button#saveTwo");
             let submit = document.querySelector("button#hexhex");
+            let getRecipe = document.querySelector("button#getRecipe");
             buttonEins.addEventListener("click", handleChange);
             buttonZwei.addEventListener("click", handleAnotherChange);
             submit.addEventListener("click", submitTrank);
+            getRecipe.addEventListener("click", retrieveRecipes);
         });
     }
     function submitTrank(_event) {
@@ -35,30 +37,37 @@ var L04_hexenkessel;
             alert("Danke für deinen Zaubertrank");
         });
     }
-    function handleChange(_event) {
-        console.log("Change");
-        let display = document.querySelector("div#display");
-        display.innerHTML = "";
-        let formData = new FormData(document.forms[0]);
-        for (let entry of formData) {
-            if (entry[1] != "") {
-                display.innerHTML += entry[1] + "<br>";
-            }
-        }
-    }
-    function handleAnotherChange(_event) {
-        console.log("Anweisungen");
-        let display = document.querySelector("div#display");
-        let formData = new FormData(document.forms[1]);
-        for (let entry of formData) {
-            let item = document.querySelector("[value='" + entry[1] + "']");
-            if (item.getAttribute("priceG") != null) {
-                let GalleonenPrice = Number(item.getAttribute("priceG"));
-                let SickelPrice = Number(item.getAttribute("priceS"));
-                let KnutsPrice = Number(item.getAttribute("priceK"));
-                display.innerHTML += "Preis: " + GalleonenPrice.value + " Galleonen" + SickelPrice.value + " Sickel" + KnutsPrice.value + " Knuts" + "<br>";
-            }
-        }
+    function retrieveRecipes() {
+        return __awaiter(this, void 0, void 0, function* () {
+            let response = yield fetch(url + "?" + "command=retrieve");
+            let responseText = yield response.text();
+            alert(responseText.replace(/<br>/g, " "));
+        });
     }
 })(L04_hexenkessel || (L04_hexenkessel = {}));
+function handleChange(_event) {
+    console.log("Change");
+    let display = document.querySelector("div#display");
+    display.innerHTML = "";
+    let formData = new FormData(document.forms[0]);
+    for (let entry of formData) {
+        if (entry[1] != "") {
+            display.innerHTML += entry[1] + "<br>";
+        }
+    }
+}
+function handleAnotherChange(_event) {
+    console.log("Anweisungen");
+    let display = document.querySelector("div#display");
+    let formData = new FormData(document.forms[1]);
+    for (let entry of formData) {
+        let item = document.querySelector("[value='" + entry[1] + "']");
+        if (item.getAttribute("priceG") != null) {
+            let GalleonenPrice = Number(item.getAttribute("priceG"));
+            let SickelPrice = Number(item.getAttribute("priceS"));
+            let KnutsPrice = Number(item.getAttribute("priceK"));
+            display.innerHTML += "Preis: " + GalleonenPrice.value + " Galleonen" + SickelPrice.value + " Sickel" + KnutsPrice.value + " Knuts" + "<br>";
+        }
+    }
+}
 //# sourceMappingURL=hexenkessel.js.map
