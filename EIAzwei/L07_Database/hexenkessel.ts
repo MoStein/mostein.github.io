@@ -14,12 +14,12 @@ namespace L04_hexenkessel {
         let buttonEins : HTMLElement = <HTMLElement>document.querySelector("button#saveOne");
         let buttonZwei : HTMLElement = <HTMLElement>document.querySelector("button#saveTwo");
         let submit : HTMLElement = <HTMLElement>document.querySelector("button#hexhex");
+        let getRecipe : HTMLElement = <HTMLElement>document.querySelector("button#getRecipe");
         
         buttonEins.addEventListener("click", handleChange);
         buttonZwei.addEventListener("click", handleAnotherChange);
         submit.addEventListener("click", submitTrank);
-        
-        
+        getRecipe.addEventListener("click", retrieveRecipes);   
     }
     async function submitTrank(_event: MouseEvent): Promise<void> {
         console.log("Submit");
@@ -28,6 +28,13 @@ namespace L04_hexenkessel {
        await fetch("hexenkessel.html?" + query.toString()); 
         alert("Danke für deinen Zaubertrank");
         
+    }
+    async function retrieveRecipes(): Promise<void> {
+        let response : Response = await fetch(url + "?" + "command=retrieve");
+        let responseText : string = await response.text();
+        alert(responseText.replace(/<br>/g, " "));
+        
+    }
     }
 
     function handleChange(_event: MouseEvent): void{
@@ -68,4 +75,3 @@ namespace L04_hexenkessel {
     
     
     
-}
