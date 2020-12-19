@@ -19,7 +19,6 @@ var skipiste;
         //drawSnow({x: 800, y:600},{x: 1800, y:600});
         //createSkier(12);
         //createSnow(500);
-        window.setInterval(update, 20);
         for (let i = 0; i < 5000; i++) {
             snowing[i] = new skipiste.Snowflake(Math.random() * 800, Math.random() * 600);
             console.log("it's snowing");
@@ -114,17 +113,10 @@ var skipiste;
         skipiste.crc2.fillStyle = "darkgreen";
         skipiste.crc2.fill();
         skipiste.crc2.save();
-        skipiste.crc2.beginPath();
-        skipiste.crc2.moveTo(525, 600);
-        skipiste.crc2.lineTo(550, 500);
-        skipiste.crc2.lineTo(575, 600);
-        skipiste.crc2.closePath();
-        skipiste.crc2.fillStyle = "darkgreen";
-        skipiste.crc2.fill();
-        skipiste.crc2.save();
         skipiste.crc2.restore();
     }
     function create() {
+        skipiste.crc2.putImageData(imgData, 0, 0);
         for (let i = 0; i < snowing.length; i++) {
             snowing[i].update();
         }
