@@ -33,7 +33,7 @@ namespace skipiste {
         //createSkier(12);
         //createSnow(500);
 
-        window.setInterval(update, 20);
+        
 
         for (let i: number = 0; i < 5000; i++) {
             snowing[i] = new Snowflake(Math.random() * 800, Math.random() * 600);
@@ -151,23 +151,13 @@ namespace skipiste {
         crc2.fillStyle = "darkgreen";
         crc2.fill();
         crc2.save();
-
-        
-        crc2.beginPath();
-        crc2.moveTo(525, 600);
-        crc2.lineTo(550, 500);
-        crc2.lineTo(575, 600);
-        crc2.closePath();
-
-        crc2.fillStyle = "darkgreen";
-        crc2.fill();
-
-        crc2.save();     
+    
  
         crc2.restore();
 
     }
     function create (){
+        crc2.putImageData(imgData, 0, 0);
         for (let i: number = 0; i < snowing.length; i++) {
             snowing[i].update();
         }
