@@ -1,45 +1,50 @@
 namespace skipiste {
     export class Snowflake {
-        x: number;
-        y: number;
-        dx: number;
-        dy: number;
+        position: Vector;
+        size: Vector;
+        particle: Path2D;
 
-        constructor (_x: number, _y: number){
+        constructor (_size: Vector, _position: Vector){
             console.log("constructor snowflake");
 
-            this.x = _x * 1000
-            this.y = _y * 5000
-            this.dx = 0;
-            this.dy = 0.1 * +10; 
-        }
-        draw (){
-            console.log("draw snowflake");
+            if(_position)
+               this.position = _position;
+            else
+               this.position = new Vector(0,0);
 
-            let schnee: Path2D = new Path2D();
-            schnee.arc(this.x, this.y, 9, 0, 2 * Math.PI);
-            crc2.fillStyle = "white";
-            crc2.fill(schnee);
+            this.size = _size;
+            this.particle = new Path2D();
 
-            let blub: Path2D = new Path2D();
-            blub.arc(this.x, this.y, 7, 0, 2 * Math.PI);
-            crc2.fillStyle = "white";
-            crc2.fill(blub)
         }
-        update (){
-            console.log("update snowflake");
+        draw (): void {
+            //console.log("draw snowflake");
 
-            this.move();
-            this.draw();
-        }
-        move (){
-            console.log("move snowflake");
+            crc2.beginPath();
+            crc2.save();
+            let radiusParticle: number = Math.random() * 5;
+            this.particle.arc(0,0, radiusParticle, 0, 2 * Math.PI);
+
+            crc2.translate(this.position.x, this.position.y);
+            crc2.fillStyle = "lightgrey";
+
+            let x: number = this.size.x;
+            let y: number = this.size.y; 
+            crc2.translate(x, y);
+            crc2.fill(this.particle);
+            crc2.restore();
             
-            this.x += this.dx;
-            this.y += this.dy;
-            if (this.y < 0) {
-                this.y = 900 + this.dy;
+            crc2.closePath();
+
+            
+        }
+        move (): void {
+            console.log("move snowflake");
+            this.size.y -= 2;
+
+            if (this.size.y < - crc2.canvas.height){
+                this.size.y = 0;
             }
+           
         }
     }
 }
