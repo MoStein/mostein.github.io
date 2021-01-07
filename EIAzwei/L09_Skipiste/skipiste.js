@@ -2,32 +2,24 @@ var skipiste;
 (function (skipiste) {
     let skiers = [];
     let snowing = [];
-    let imgData;
+    let imageData;
     window.addEventListener("load", handleLoad);
     let canvas;
     function handleLoad(_event) {
         console.log("Hi");
         canvas = document.querySelector("canvas");
         skipiste.crc2 = canvas.getContext("2d");
-        //let imageData: ImageData;
         drawBackground();
         drawSun(new skipiste.Vector(100, 75));
         drawPist();
         drawHouse();
         drawLift();
         drawTree();
+        imageData = skipiste.crc2.getImageData(0, 0, canvas.width, canvas.height);
         //drawSnow({x: 800, y:600},{x: 1800, y:600});
-        //createSkier(12);
-        //createSnow(500);
-        for (let i = 0; i < 5000; i++) {
-            snowing[i] = new skipiste.Snowflake(Math.random() * 800, Math.random() * 600);
-            console.log("it's snowing");
-        }
-        for (let i = 0; i < 20; i++) {
-            skiers[i] = new skipiste.Skier(Math.random() * 500 + 750, Math.random() * 200 - 25, Math.random() * 1.5 - 3.5, Math.random() * 1 + 1, "hsl(" + Math.random() * 360 + ", 100%, 50%)");
-            console.log("for Skifahrer init");
-            create();
-        }
+        createSkier(12);
+        createSnow(500);
+        window.setInterval(update, 20);
     }
     function drawBackground() {
         console.log("Background");
@@ -36,6 +28,7 @@ var skipiste;
         gradient.addColorStop(1, "white");
         skipiste.crc2.fillStyle = gradient;
         skipiste.crc2.fillRect(0, 0, skipiste.crc2.canvas.width, skipiste.crc2.canvas.height);
+        skipiste.crc2.closePath();
     }
     function drawSun(_position) {
         console.log("Sun", _position);
@@ -115,30 +108,24 @@ var skipiste;
         skipiste.crc2.save();
         skipiste.crc2.restore();
     }
-    function create() {
-        skipiste.crc2.putImageData(imgData, 0, 0);
-        for (let i = 0; i < snowing.length; i++) {
-            snowing[i].update();
-        }
-        for (let i = 0; i < skiers.length; i++) {
-            skiers[i].update();
+    function createSkier(_nSkier) {
+        console.log("create Skier");
+        for (let i = 0; i < _nSkier; i++) {
+            let x = (Math.random() - 0.5) * 700;
+            let y = -(Math.random() * 200);
+            let skier = new skipiste.Skier(new skipiste.Vector(-200, 0), new skipiste.Vector(x, y));
+            skiers.push(skier);
         }
     }
-    //function createSkier(_nSkier: number): void{
-    //    console.log("create Skier");
-    //    for (let i: number = 0; i < _nSkier; i++) {
-    //        let x: number = Math.random() * (300 - 150) + 150;
-    //        let skier: Skier = new Skier(1.0, x, 300);
-    //       skiers.push(skier);
-    //}
-    //function createSnow(_nSnowflake: number): void{
-    //    console.log("create Snow");
-    //   for (let i: number = 0; i < _nSnowflake; i++){
-    //       let x: number = Math.random() * (300 - 150) + 150;
-    //       let snow: Snowflake = new Snowflake(x, 300);
-    //       snowing.push(snow);
-    //  }
-    //}
+    function createSnow(_nSnowflake) {
+        console.log("create Snow");
+        for (let i = 0; i < _nSnowflake; i++) {
+            let x = (Math.random() - 0.5) * skipiste.crc2.canvas.width;
+            let y = -(Math.random() * skipiste.crc2.canvas.height);
+            let snow = new skipiste.Snowflake(new skipiste.Vector(x, y), new skipiste.Vector(600, 0));
+            snowing.push(snow);
+        }
+    }
     //function drawSkier(): void {
     //  console.log("Skier");
     //  let skier: number = 20;
@@ -184,13 +171,17 @@ var skipiste;
     // crc2.stroke();
     // crc2.restore();
     //}
-    //function update(): void {
-    //   console.log("Update");
-    //   crc2.fillRect(0, 0, crc2.canvas.width, crc2.canvas.height);
-    //   for (let skier of skiers) {
-    //       skier.move(); //1 / 50
-    //       skier.draw();
-    //    }
-    window.setTimeout(create, 20);
+    function update() {
+        console.log("Update");
+        skipiste.crc2.putImageData(imageData, 0, 0);
+        for (let skier of skiers) {
+            skier.move(); //1 / 50
+            skier.draw();
+        }
+        for (let snowflake of snowing) {
+            snowflake.draw();
+            snowflake.move();
+        }
+    }
 })(skipiste || (skipiste = {}));
 //# sourceMappingURL=skipiste.js.map
