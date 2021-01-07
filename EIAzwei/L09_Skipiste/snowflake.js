@@ -1,35 +1,35 @@
 var skipiste;
 (function (skipiste) {
     class Snowflake {
-        constructor(_x, _y) {
+        constructor(_size, _position) {
             console.log("constructor snowflake");
-            this.x = _x * 1000;
-            this.y = _y * 5000;
-            this.dx = 0;
-            this.dy = 0.1 * +10;
+            if (_position)
+                this.position = _position;
+            else
+                this.position = new skipiste.Vector(0, 0);
+            this.size = _size;
+            this.particle = new Path2D();
         }
         draw() {
-            console.log("draw snowflake");
-            let schnee = new Path2D();
-            schnee.arc(this.x, this.y, 9, 0, 2 * Math.PI);
-            skipiste.crc2.fillStyle = "white";
-            skipiste.crc2.fill(schnee);
-            let blub = new Path2D();
-            blub.arc(this.x, this.y, 7, 0, 2 * Math.PI);
-            skipiste.crc2.fillStyle = "white";
-            skipiste.crc2.fill(blub);
-        }
-        update() {
-            console.log("update snowflake");
-            this.move();
-            this.draw();
+            //console.log("draw snowflake");
+            skipiste.crc2.beginPath();
+            skipiste.crc2.save();
+            let radiusParticle = Math.random() * 5;
+            this.particle.arc(0, 0, radiusParticle, 0, 2 * Math.PI);
+            skipiste.crc2.translate(this.position.x, this.position.y);
+            skipiste.crc2.fillStyle = "lightgrey";
+            let x = this.size.x;
+            let y = this.size.y;
+            skipiste.crc2.translate(x, y);
+            skipiste.crc2.fill(this.particle);
+            skipiste.crc2.restore();
+            skipiste.crc2.closePath();
         }
         move() {
             console.log("move snowflake");
-            this.x += this.dx;
-            this.y += this.dy;
-            if (this.y < 0) {
-                this.y = 900 + this.dy;
+            this.size.y -= 2;
+            if (this.size.y < -skipiste.crc2.canvas.height) {
+                this.size.y = 0;
             }
         }
     }
