@@ -3,7 +3,7 @@ var skipiste;
     class Snowflake extends skipiste.Moveable {
         constructor(_size, _position) {
             console.log("constructor snowflake");
-            super(_position);
+            super(_position, _size);
             if (_position)
                 this.position = _position;
             else
@@ -25,13 +25,6 @@ var skipiste;
             skipiste.crc2.fill(this.particle);
             skipiste.crc2.restore();
             skipiste.crc2.closePath();
-        }
-        move() {
-            console.log("move snowflake");
-            this.size.y -= 2;
-            if (this.size.y < -skipiste.crc2.canvas.height) {
-                this.size.y = 0;
-            }
         }
     }
     skipiste.Snowflake = Snowflake;

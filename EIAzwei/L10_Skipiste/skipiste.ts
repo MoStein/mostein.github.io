@@ -218,7 +218,7 @@ namespace skipiste {
        crc2.putImageData(imageData, 0, 0);
 
       for (let moveable of moveables) {
-           moveable.move(); //1 / 50
+           moveable.move(); // 1/50
            moveable.draw();
         }
       }

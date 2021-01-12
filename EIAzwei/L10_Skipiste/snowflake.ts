@@ -7,7 +7,7 @@ namespace skipiste {
         constructor (_size: Vector, _position: Vector){
             console.log("constructor snowflake");
 
-            super (_position);
+            super (_position, _size);
 
             if(_position)
                this.position = _position;
@@ -39,14 +39,14 @@ namespace skipiste {
 
             
         }
-        move (): void {
-            console.log("move snowflake");
-            this.size.y -= 2;
+        //move (): void {
+         //   console.log("move snowflake");
+        //    this.size.y -= 2;
 
-            if (this.size.y < - crc2.canvas.height){
-                this.size.y = 0;
-            }
+         //   if (this.size.y < - crc2.canvas.height){
+         //       this.size.y = 0;
+        //    }
            
-        }
+        //}
     }
 }

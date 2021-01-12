@@ -2,11 +2,11 @@ var skipiste;
 (function (skipiste) {
     class Skier extends skipiste.Moveable {
         constructor(_position, _size) {
-            super(_position);
+            super(_position, _size);
             console.log("constructor skier");
         }
         draw() {
-            console.log("draw skier");
+            //console.log("draw skier");
         }
     }
     skipiste.Skier = Skier;

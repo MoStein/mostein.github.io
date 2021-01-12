@@ -5,13 +5,13 @@ namespace skipiste {
         color: string;
 
         constructor (_position: Vector, _size: Vector){
-            super (_position);
+            super (_position, _size);
             console.log("constructor skier");
             
             
         }
         draw (){
-            console.log("draw skier");
+            //console.log("draw skier");
 
             
         }
