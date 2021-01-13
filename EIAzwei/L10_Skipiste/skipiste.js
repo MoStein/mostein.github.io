@@ -110,19 +110,21 @@ var skipiste;
     function createSkier(_nSkier) {
         console.log("create Skier");
         for (let i = 0; i < _nSkier; i++) {
-            let x = (Math.random() + 0.5) * 700;
-            let y = (Math.random() * 200);
-            let skier = new skipiste.Skier(new skipiste.Vector(200, 0), new skipiste.Vector(x, y));
+            //let x: number = (Math.random() + 0.5) * 700 ;
+            //let y: number = (Math.random() * 200);
+            let skier = new skipiste.Skier(); //(new Vector (200, 0), new Vector (x, y));
             moveables.push(skier);
+            console.log(moveables);
         }
     }
     function createSnow(_nSnowflake) {
         console.log("create Snow");
         for (let i = 0; i < _nSnowflake; i++) {
-            let x = (Math.random() - 0.5) * skipiste.crc2.canvas.width;
-            let y = -(Math.random() * skipiste.crc2.canvas.height);
-            let snow = new skipiste.Snowflake(new skipiste.Vector(x, y), new skipiste.Vector(600, 0));
+            // let x: number = (Math.random() - 0.5) * crc2.canvas.width;
+            // let y: number = - (Math.random() * crc2.canvas.height);
+            let snow = new skipiste.Snowflake(); //(new Vector(x, y), new Vector(600, 0));
             moveables.push(snow);
+            console.log(moveables);
         }
     }
     //function drawSkier(): void {
@@ -173,9 +175,9 @@ var skipiste;
     function update() {
         console.log("Update");
         skipiste.crc2.putImageData(imageData, 0, 0);
-        for (let moveable of moveables) {
-            moveable.move(); // 1/50
-            moveable.draw();
+        for (let i = 0; i < moveables.length; i++) {
+            moveables[i].move(); // 1/50
+            moveables[i].draw();
         }
     }
 })(skipiste || (skipiste = {}));

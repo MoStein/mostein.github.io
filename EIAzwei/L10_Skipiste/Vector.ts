@@ -13,5 +13,9 @@ namespace skipiste{
         public calcLength(): void{
             this.length = Math.sqrt((this.x*this.x)+(this.y*this.y));
         }
+        add(_addend: Vector): void {
+            this.x += _addend.x;
+            this.y += _addend.y;
+        }
     }
 }

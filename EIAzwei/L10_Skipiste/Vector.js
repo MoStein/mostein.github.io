@@ -9,6 +9,10 @@ var skipiste;
         calcLength() {
             this.length = Math.sqrt((this.x * this.x) + (this.y * this.y));
         }
+        add(_addend) {
+            this.x += _addend.x;
+            this.y += _addend.y;
+        }
     }
     skipiste.Vector = Vector;
 })(skipiste || (skipiste = {}));
