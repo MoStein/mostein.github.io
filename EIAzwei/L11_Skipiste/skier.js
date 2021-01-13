@@ -28,7 +28,7 @@ var skipiste;
             skipiste.crc2.closePath();
             //Body
             skipiste.crc2.beginPath();
-            skipiste.crc2.fillStyle = "red";
+            skipiste.crc2.fillStyle = this.color;
             skipiste.crc2.fillRect(this.position.x + 10, this.position.y - 30, 15, 30);
             skipiste.crc2.fill();
             skipiste.crc2.closePath();

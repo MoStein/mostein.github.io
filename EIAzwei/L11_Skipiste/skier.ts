@@ -19,7 +19,7 @@ namespace skipiste {
             this.color = randomColor;
             
         }
-        draw (){
+        public draw (){
             
             //Ski
             crc2.beginPath();
@@ -36,7 +36,7 @@ namespace skipiste {
 
             //Body
             crc2.beginPath();
-            crc2.fillStyle = "red";
+            crc2.fillStyle = this.color;
             crc2.fillRect(this.position.x + 10, this.position.y -30, 15, 30);
             crc2.fill();
             crc2.closePath();
@@ -44,7 +44,7 @@ namespace skipiste {
 
             
         }
-        move(){
+        public move(){
            //console.log("move skier");
            this.position.add(this.velocity);
             //console.log(this.position);

@@ -36,9 +36,6 @@ var skipiste;
                 this.position.x = 800;
             }
         }
-        draw() {
-            // leer
-        }
     }
     skipiste.Moveable = Moveable;
 })(skipiste || (skipiste = {}));

@@ -16,7 +16,7 @@ namespace skipiste {
             this.particle = new Path2D();
         }
 
-        move(): void {
+        public move(): void {
             //     if (this.position.x == 200) {              
             //        this.size.x += 10;
 
@@ -52,8 +52,7 @@ namespace skipiste {
         }
 
 
-        draw(): void {
-            // leer
-        }
+        public abstract draw(): void;
+        
     }
 }

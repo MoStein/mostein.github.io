@@ -15,7 +15,7 @@ namespace skipiste {
 
 
         }
-        draw (): void {
+        public draw (): void {
 
             crc2.beginPath();
             crc2.save();
@@ -37,7 +37,7 @@ namespace skipiste {
 
             
         }
-        //move (): void {
+       // move (): void; //{
          //   console.log("move snowflake");
         //    this.size.y -= 2;
 
