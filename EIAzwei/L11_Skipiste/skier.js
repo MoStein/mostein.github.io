@@ -15,17 +15,20 @@ var skipiste;
             this.color = randomColor;
         }
         draw() {
+            //Ski
             skipiste.crc2.beginPath();
             skipiste.crc2.fillStyle = "black";
             skipiste.crc2.fillRect(this.position.x, this.position.y, 40, 6);
             skipiste.crc2.closePath();
+            //Head
             skipiste.crc2.beginPath();
             skipiste.crc2.fillStyle = "pink";
             skipiste.crc2.arc(this.position.x + 15, this.position.y - 40, 5, 0, 2 * Math.PI);
             skipiste.crc2.fill();
             skipiste.crc2.closePath();
+            //Body
             skipiste.crc2.beginPath();
-            skipiste.crc2.fillStyle = this.color;
+            skipiste.crc2.fillStyle = "red";
             skipiste.crc2.fillRect(this.position.x + 10, this.position.y - 30, 15, 30);
             skipiste.crc2.fill();
             skipiste.crc2.closePath();

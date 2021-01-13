@@ -1,18 +1,25 @@
-var skipiste;
-(function (skipiste) {
-    class Moveable {
-        constructor(_position, _size) {
-            this.check = 0;
-            let x = 800 * Math.random();
-            let y = 600 * Math.random();
-            this.position = new skipiste.Vector(x, y);
-            this.velocity = new skipiste.Vector(0, 0);
+namespace skipiste {
+    export abstract class Moveable {
+        public position: Vector;
+        //public size: Vector;
+        public velocity: Vector
+        public particle: Path2D;
+        public check: number = 0;
+
+        constructor(_position: Vector, _size: Vector) {
+
+            let x: number = 800 * Math.random();
+            let y: number = 600 * Math.random();
+            this.position = new Vector(x,y);
+            this.velocity = new Vector(0, 0);
             //this.size = _size;
             this.particle = new Path2D();
         }
-        move() {
+
+        move(): void {
             //     if (this.position.x == 200) {              
             //        this.size.x += 10;
+
             //     if (this.check % 2 == 0) {
             //         this.size.y += Math.random() * 13;
             //     } else {
@@ -21,25 +28,32 @@ var skipiste;
             //     if (this.size.x > 700) {
             //         this.size.x = 200;
             //     }
+
             //     this.check++;
             // }
             //     else {
             // this.size.y -= 2;
+
             // if (this.size.y < -crc2.canvas.height)
             // this.size.y = 0;
+
             this.position.add(this.velocity);
             console.log(this.position);
-            if (this.position.y > 600) {
+
+            if (this.position.y > 600){
                 this.position.y = 0;
             }
-            if (this.position.x < 0) {
+            if (this.position.x < 0){
                 this.position.x = 800;
             }
+
+
+
         }
-        draw() {
+
+
+        draw(): void {
             // leer
         }
     }
-    skipiste.Moveable = Moveable;
-})(skipiste || (skipiste = {}));
-//# sourceMappingURL=moveable.js.map
+}

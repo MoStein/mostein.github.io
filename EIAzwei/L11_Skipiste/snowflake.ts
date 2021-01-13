@@ -5,7 +5,7 @@ namespace skipiste {
         constructor (_size?: Vector, _position?: Vector){
             console.log("constructor snowflake");
 
-            super (_position, _size );
+            super (_position, _size, );
 
             let x: number = 800 * Math.random();
             let y: number = 600 * Math.random();
@@ -14,17 +14,8 @@ namespace skipiste {
             this.velocity = new Vector(0, 5);
 
 
-            //if(_position)
-             //  this.position = _position;
-            //else
-             //  this.position = new Vector(0,0);
-
-            // this.size = _size;
-            // this.particle = new Path2D();
-
         }
         draw (): void {
-            //console.log("draw snowflake");
 
             crc2.beginPath();
             crc2.save();

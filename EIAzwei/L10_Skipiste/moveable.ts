@@ -1,7 +1,7 @@
 namespace skipiste {
     export class Moveable {
         position: Vector;
-        size: Vector;
+        //size: Vector;
         velocity: Vector
         particle: Path2D;
         check: number = 0;
@@ -12,7 +12,7 @@ namespace skipiste {
             let y: number = 600 * Math.random();
             this.position = new Vector(x,y);
             this.velocity = new Vector(0, 0);
-            this.size = _size;
+            //this.size = _size;
             this.particle = new Path2D();
         }
 

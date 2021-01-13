@@ -28,6 +28,8 @@ namespace skipiste {
         createSkier(10);
         createSnow(50);
 
+        canvas.addEventListener("click", handleClick);
+
         window.setInterval(update, 20);
 
 
@@ -145,9 +147,7 @@ namespace skipiste {
     function createSkier(_nSkier: number): void {
         console.log("create Skier");
         for (let i: number = 0; i < _nSkier; i++) {
-            //let x: number = (Math.random() + 0.5) * 700 ;
-            //let y: number = (Math.random() * 200);
-            let skier: Skier = new Skier();//(new Vector (200, 0), new Vector (x, y));
+            let skier: Skier = new Skier();
             moveables.push(skier);
             console.log(moveables);
         }
@@ -155,13 +155,14 @@ namespace skipiste {
     function createSnow(_nSnowflake: number): void {
         console.log("create Snow");
         for (let i: number = 0; i < _nSnowflake; i++) {
-            // let x: number = (Math.random() - 0.5) * crc2.canvas.width;
-            // let y: number = - (Math.random() * crc2.canvas.height);
-            let snow: Snowflake = new Snowflake();//(new Vector(x, y), new Vector(600, 0));
+            let snow: Snowflake = new Snowflake();
             moveables.push(snow);
             console.log(moveables);
         }
 
+    }
+    function handleClick(){
+        console.log("Skier kill");
     }
     //function drawSkier(): void {
     //  console.log("Skier");
@@ -220,7 +221,7 @@ namespace skipiste {
         crc2.putImageData(imageData, 0, 0);
 
         for (let i: number = 0; i< moveables.length; i++) {
-            moveables[i].move(); // 1/50
+            moveables[i].move(); 
             moveables[i].draw();
         }
     }

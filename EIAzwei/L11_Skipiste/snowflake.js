@@ -8,15 +8,8 @@ var skipiste;
             let y = 600 * Math.random();
             this.position = new skipiste.Vector(x, y);
             this.velocity = new skipiste.Vector(0, 5);
-            //if(_position)
-            //  this.position = _position;
-            //else
-            //  this.position = new Vector(0,0);
-            // this.size = _size;
-            // this.particle = new Path2D();
         }
         draw() {
-            //console.log("draw snowflake");
             skipiste.crc2.beginPath();
             skipiste.crc2.save();
             skipiste.crc2.translate(this.position.x, this.position.y);
