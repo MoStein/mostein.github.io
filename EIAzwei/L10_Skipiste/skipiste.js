@@ -16,8 +16,8 @@ var skipiste;
         drawTree();
         imageData = skipiste.crc2.getImageData(0, 0, canvas.width, canvas.height);
         //drawSnow({x: 800, y:600},{x: 1800, y:600});
-        createSkier(12);
-        createSnow(500);
+        createSkier(1);
+        createSnow(1);
         window.setInterval(update, 20);
     }
     function drawBackground() {
@@ -110,9 +110,9 @@ var skipiste;
     function createSkier(_nSkier) {
         console.log("create Skier");
         for (let i = 0; i < _nSkier; i++) {
-            let x = (Math.random() - 0.5) * 700;
-            let y = -(Math.random() * 200);
-            let skier = new skipiste.Skier(new skipiste.Vector(-200, 0), new skipiste.Vector(x, y));
+            let x = (Math.random() + 0.5) * 700;
+            let y = (Math.random() * 200);
+            let skier = new skipiste.Skier(new skipiste.Vector(200, 0), new skipiste.Vector(x, y));
             moveables.push(skier);
         }
     }

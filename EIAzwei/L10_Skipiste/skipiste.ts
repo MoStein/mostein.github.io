@@ -25,8 +25,8 @@ namespace skipiste {
         drawTree();
         imageData = crc2.getImageData(0, 0, canvas.width, canvas.height);
         //drawSnow({x: 800, y:600},{x: 1800, y:600});
-        createSkier(12);
-        createSnow(500);
+        createSkier(1);
+        createSnow(1);
         
         window.setInterval(update, 20);
 
@@ -145,9 +145,9 @@ namespace skipiste {
     function createSkier(_nSkier: number): void{
        console.log("create Skier");
        for (let i: number = 0; i < _nSkier; i++) {
-           let x: number = (Math.random() - 0.5) * 700 ;
-           let y: number = - (Math.random() * 200);
-            let skier: Skier = new Skier(new Vector (-200, 0), new Vector (x, y));
+          let x: number = (Math.random() + 0.5) * 700 ;
+          let y: number = (Math.random() * 200);
+         let skier: Skier = new Skier(new Vector (200, 0), new Vector (x, y));
             moveables.push(skier);
        }
     }
