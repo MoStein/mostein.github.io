@@ -6,7 +6,7 @@ var skipiste;
             console.log("constructor skier");
         }
         draw() {
-            //console.log("draw skier");
+            console.log(this.position.x, this.position.y);
             skipiste.crc2.beginPath();
             skipiste.crc2.rect(this.position.x, this.position.y, 12, 6);
             skipiste.crc2.fillStyle = "red";

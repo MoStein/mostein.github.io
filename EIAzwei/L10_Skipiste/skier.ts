@@ -11,7 +11,7 @@ namespace skipiste {
             
         }
         draw (){
-            //console.log("draw skier");
+            console.log(this.position.x, this.position.y);
 
             crc2.beginPath();
             crc2.rect(this.position.x, this.position.y, 12, 6);
