@@ -2,7 +2,7 @@ namespace skipiste {
     export abstract class Moveable {
         public position: Vector;
         public velocity: Vector;
-        protected hitRadius: number = 0;
+        //protected hitRadius: number = 0;
         
 
         constructor(_position: Vector, _size?: Vector) {

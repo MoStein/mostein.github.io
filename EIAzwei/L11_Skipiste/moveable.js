@@ -1,8 +1,8 @@
 var skipiste;
 (function (skipiste) {
     class Moveable {
+        //protected hitRadius: number = 0;
         constructor(_position, _size) {
-            this.hitRadius = 0;
             let x = 800 * Math.random();
             let y = 600 * Math.random();
             this.position = new skipiste.Vector(x, y);
