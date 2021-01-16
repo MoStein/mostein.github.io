@@ -27,7 +27,7 @@ namespace skipiste {
 
             crc2.beginPath();
             crc2.fillStyle = "black";
-            crc2.fillRect(this.position.x, this.position.y, 40, 6);
+            crc2.fillRect(this.position.x, this.position.y, 40, 4);
             crc2.closePath();
 
             crc2.beginPath();

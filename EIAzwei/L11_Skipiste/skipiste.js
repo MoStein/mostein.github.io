@@ -15,7 +15,6 @@ var skipiste;
         drawLift();
         drawTree();
         imageData = skipiste.crc2.getImageData(0, 0, canvas.width, canvas.height);
-        //drawSnow({x: 800, y:600},{x: 1800, y:600});
         createSkier(10);
         createSnow(50);
         canvas.addEventListener("click", handleClick);
@@ -124,54 +123,30 @@ var skipiste;
             console.log(moveables);
         }
     }
-    function handleClick() {
+    function handleClick(_event) {
         console.log("Skier kill");
+        //let hitRadius: number = 20;
+        let hotspot = new skipiste.Vector(_event.clientX - skipiste.crc2.canvas.offsetLeft, _event.clientY - skipiste.crc2.canvas.offsetTop);
+        let skierKill = getSkierKill(hotspot);
+        console.log(hotspot);
+        if (skierKill)
+            killSkier(skierKill);
     }
-    //function drawSkier(): void {
-    //  console.log("Skier");
-    //  let skier: number = 20;
-    //  console.log("ski1");
-    //  for (let drawn: number = 0; drawn < skier; drawn++) {
-    //   let x: number = Math.random() * (800 - 300) + 300;
-    //    let y: number = Math.random() * (500 - 200) + 200;
-    //    drawSki(x, y);
-    //    crc2.fill();
-    //}
-    // function drawSki(x: number, y: number): void {
-    // console.log("hey");
-    //   crc2.save();
-    //  let colors: string[] = ["red", "darkblue", "lightgreen", "darkviolet", "blue", "yellow"];
-    //   let random: string = colors[Math.floor(Math.random() * colors.length)];
-    //  crc2.fillStyle = random;
-    //  crc2.strokeStyle = "black";
-    //  console.log(random);
-    //  let radius2: number = 5;
-    //  console.log("xy" + x + " " + y);
-    //  crc2.beginPath();
-    //  crc2.moveTo(x, y);
-    //  crc2.lineTo(x - 5, y + 25);
-    // crc2.lineTo(x + 15, y + 25);
-    // crc2.lineTo(x + 5, y);
-    // crc2.arc(x + 5, y, radius2, 0, 2 * Math.PI);
-    // crc2.lineTo(x - 5, y + 25);
-    // crc2.closePath();
-    // crc2.fill();
-    // crc2.beginPath();
-    // crc2.moveTo(x, y + 25);
-    // crc2.lineTo(x - 25, y + 40);
-    //crc2.lineTo(x - 20, y + 40);
-    // crc2.lineTo(x + 5, y + 25);
-    // crc2.lineTo(x - 5, y + 25);
-    // crc2.lineTo(x + 10, y + 25);
-    // crc2.lineTo(x - 15, y + 40);
-    // crc2.lineTo(x - 10, y + 40);
-    //crc2.lineTo(x + 15, y + 25);
-    //crc2.lineTo(x, y + 25);
-    //crc2.closePath();
-    // crc2.fill();
-    // crc2.stroke();
-    // crc2.restore();
-    //}
+    function getSkierKill(_hotspot) {
+        console.log("get skier kill");
+        for (let moveable of moveables) {
+            if (moveable instanceof skipiste.Skier && moveable.isHit(_hotspot))
+                return moveable;
+        }
+        return null;
+    }
+    function killSkier(_skier) {
+        console.log("kill skier");
+        if (_skier.isHit(_hotspot)) {
+            _skier.position.x = 800;
+            _skier.position.y = 225 + Math.random() * 20;
+        }
+    }
     function update() {
         console.log("Update");
         skipiste.crc2.putImageData(imageData, 0, 0);

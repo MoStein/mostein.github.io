@@ -1,6 +1,8 @@
 namespace skipiste {
     export class Skier extends Moveable {
        public color: string;
+       //private hitRadius: number = 30;
+       //private isHit: boolean;
 
         constructor (_position?: Vector, _size?: Vector){
             super (_position, _size);
@@ -17,6 +19,8 @@ namespace skipiste {
             let colors: string [] = ["red", "green", "blue", "orange", "purple","yellow", "grey", "black", "brown", "magenta"];
             let randomColor = colors[Math.floor(Math.random()* colors.length)];
             this.color = randomColor;
+
+            
             
         }
         public draw (){
@@ -57,7 +61,14 @@ namespace skipiste {
             if (this.position.x < 0){
                 this.position.x = 800;
             }
+            
            
+        }
+        public isHit(_hotspot: Vector): boolean {
+            let hitRadius: number = 50;
+            let difference: Vector = new Vector(_hotspot.x - this.position.x, _hotspot.y - this.position.y);
+            return (Math.abs(difference.x) < hitRadius && Math.abs(difference.y) < hitRadius); 
+
         }
         
     

@@ -133,6 +133,17 @@ namespace skipiste {
         crc2.lineTo(250, 400);
         crc2.closePath();
 
+        // crc2.beginPath();
+        // crc2.moveTo(220, 400);
+        // crc2.lineTo(220, 430);
+        // crc2.lineTo(240, 430);
+        // crc2.lineTo(240, 400);
+        // crc2.closePath();
+
+        // crc2.fillStyle = "brown";
+        // crc2.fill();
+        // crc2.save();
+
         crc2.fillStyle = "darkgreen";
         crc2.fill();
         crc2.save();

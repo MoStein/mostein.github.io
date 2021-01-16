@@ -3,17 +3,17 @@ namespace skipiste {
         position: Vector;
         //size: Vector;
         velocity: Vector
-        particle: Path2D;
-        check: number = 0;
+        // particle: Path2D;
+        // check: number = 0;
 
-        constructor(_position: Vector, _size: Vector) {
+        constructor(_position: Vector) {
 
             let x: number = 800 * Math.random();
             let y: number = 600 * Math.random();
             this.position = new Vector(x,y);
             this.velocity = new Vector(0, 0);
             //this.size = _size;
-            this.particle = new Path2D();
+            //this.particle = new Path2D();
         }
 
         move(): void {

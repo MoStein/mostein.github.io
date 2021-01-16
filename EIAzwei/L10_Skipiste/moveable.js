@@ -1,14 +1,15 @@
 var skipiste;
 (function (skipiste) {
     class Moveable {
-        constructor(_position, _size) {
-            this.check = 0;
+        // particle: Path2D;
+        // check: number = 0;
+        constructor(_position) {
             let x = 800 * Math.random();
             let y = 600 * Math.random();
             this.position = new skipiste.Vector(x, y);
             this.velocity = new skipiste.Vector(0, 0);
             //this.size = _size;
-            this.particle = new Path2D();
+            //this.particle = new Path2D();
         }
         move() {
             //     if (this.position.x == 200) {              

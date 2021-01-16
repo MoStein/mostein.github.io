@@ -17,7 +17,7 @@ var skipiste;
         draw() {
             skipiste.crc2.beginPath();
             skipiste.crc2.fillStyle = "black";
-            skipiste.crc2.fillRect(this.position.x, this.position.y, 40, 6);
+            skipiste.crc2.fillRect(this.position.x, this.position.y, 40, 4);
             skipiste.crc2.closePath();
             skipiste.crc2.beginPath();
             skipiste.crc2.fillStyle = "pink";

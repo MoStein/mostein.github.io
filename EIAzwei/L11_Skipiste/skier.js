@@ -1,6 +1,8 @@
 var skipiste;
 (function (skipiste) {
     class Skier extends skipiste.Moveable {
+        //private hitRadius: number = 30;
+        //private isHit: boolean;
         constructor(_position, _size) {
             super(_position, _size);
             console.log("constructor skier");
@@ -44,6 +46,11 @@ var skipiste;
             if (this.position.x < 0) {
                 this.position.x = 800;
             }
+        }
+        isHit(_hotspot) {
+            let hitRadius = 50;
+            let difference = new skipiste.Vector(_hotspot.x - this.position.x, _hotspot.y - this.position.y);
+            return (Math.abs(difference.x) < hitRadius && Math.abs(difference.y) < hitRadius);
         }
     }
     skipiste.Skier = Skier;
