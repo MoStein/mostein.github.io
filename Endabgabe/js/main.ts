@@ -32,7 +32,6 @@ namespace silvester {
     function handleCanvasClick(_event: MouseEvent): void {
 
         let tempPosition: Vector = new Vector(_event.offsetX, _event.offsetY);
-
         createFirework(tempPosition);
 
     }
