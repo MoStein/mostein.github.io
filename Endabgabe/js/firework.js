@@ -14,9 +14,9 @@ var silvester;
                         this.particleArray.push(new silvester.Circle(this.position, silvester.Vector.getuberVector(_speed, silvester.Vector.getRandom(-1, 1))));
                     }
                     break;
-                case "cone":
+                case "star":
                     for (let i = 0; i < 20; i++) {
-                        this.particleArray.push(new silvester.Cone(this.position, silvester.Vector.getuberVector(_speed, silvester.Vector.getRandom(-1, 1))));
+                        this.particleArray.push(new silvester.Star(this.position, silvester.Vector.getuberVector(_speed, silvester.Vector.getRandom(-1, 1))));
                     }
                     break;
                 case "heart":
@@ -24,8 +24,10 @@ var silvester;
                         this.particleArray.push(new silvester.Heart(this.position, silvester.Vector.getuberVector(_speed, silvester.Vector.getRandom(-1, 1))));
                     }
                     break;
-                case "arch":
-                //createCircle();
+                case "rects":
+                    for (let i = 0; i < 20; i++) {
+                        this.particleArray.push(new silvester.Rectangle(this.position, silvester.Vector.getuberVector(_speed, silvester.Vector.getRandom(-1, 1))));
+                    }
                 default:
                     console.log("Diesen Typ gibt es nicht");
                     return;

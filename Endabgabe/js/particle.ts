@@ -12,7 +12,7 @@ namespace silvester {
             
         }
         public move ():void {
-            this.velocity = Vector.getSum(this.velocity, new Vector(0, 0.01))
+            this.velocity = Vector.getSum(this.velocity, new Vector(0, 0.01)) //Gravitation
             this.position = Vector.getSum(this.position, this.velocity);
 
 

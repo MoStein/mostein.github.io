@@ -26,9 +26,9 @@ namespace silvester {
             }
             break;
 
-            case "cone": 
+            case "star": 
             for (let i:number = 0; i < 20; i++){
-                this.particleArray.push(new Cone (this.position,Vector.getuberVector(_speed, Vector.getRandom(-1,1))));
+                this.particleArray.push(new Star (this.position,Vector.getuberVector(_speed, Vector.getRandom(-1,1))));
             }
             break;
 
@@ -38,8 +38,10 @@ namespace silvester {
             }
             break;
 
-            case "arch": 
-            //createCircle();
+            case "rects": 
+            for (let i:number = 0; i < 20; i++){
+                this.particleArray.push(new Rectangle (this.position,Vector.getuberVector(_speed, Vector.getRandom(-1,1))));
+            }
 
             default: console.log("Diesen Typ gibt es nicht");
             return; }
