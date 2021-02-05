@@ -49,11 +49,13 @@ var silvester;
         let colorValue = colorTarget.value;
         let radiusTarget = document.getElementById("size");
         let radiusValue = radiusTarget.value;
+        let amountTarget = document.getElementById("amount");
+        let amountValue = amountTarget.value;
         let particleTarget = document.getElementById("pSize");
         let particleValue = particleTarget.value;
         let lifeTimeTarget = document.getElementById("lifetime");
         let lifeTimeValue = lifeTimeTarget.value;
-        let firework = new silvester.Firework(tempPosition, typeValue, colorValue, radiusValue, particleValue, lifeTimeValue * fps);
+        let firework = new silvester.Firework(tempPosition, typeValue, colorValue, radiusValue, amountValue, particleValue, lifeTimeValue * fps);
         fireworks.push(firework);
     }
     function update() {

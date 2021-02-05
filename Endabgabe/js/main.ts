@@ -55,13 +55,16 @@ namespace silvester {
         let radiusTarget: HTMLElement = document.getElementById("size");
         let radiusValue = radiusTarget.value; 
 
+        let amountTarget: HTMLElement = document.getElementById("amount");
+        let amountValue = amountTarget.value;
+
         let particleTarget: HTMLElement = document.getElementById("pSize");
         let particleValue = particleTarget.value;
 
         let lifeTimeTarget: HTMLElement = document.getElementById("lifetime");
         let lifeTimeValue = lifeTimeTarget.value;
         
-        let firework: Firework = new Firework(tempPosition, typeValue, colorValue, radiusValue, particleValue, lifeTimeValue*fps);
+        let firework: Firework = new Firework(tempPosition, typeValue, colorValue, radiusValue, amountValue, particleValue, lifeTimeValue*fps);
         fireworks.push(firework);
     }
     

@@ -4,42 +4,45 @@ namespace silvester {
         public position: Vector;
         public color: string;
         public radius: number;
+        public amount: number;
         public particleRadius: number;
         private lifeTime: number;
+
 
         protected particleArray: Particle[] = []; 
 
 
 
 
-        constructor(_position: Vector,_type:string, _color: string, _speed: number, _particleRadius: number, _lifetime: number){
+        constructor(_position: Vector,_type:string, _color: string, _speed: number,_amount: number, _particleRadius: number, _lifetime: number){
             console.log(_lifetime);
             this.color = _color;
             this.position = _position;
+            this.amount = _amount;
             this.particleRadius = _particleRadius; 
             this.lifeTime = _lifetime;
 
             switch (_type){
             case "circle": 
-            for (let i:number = 0; i < 20; i++){
+            for (let i:number = 0; i < this.amount; i++){
                 this.particleArray.push(new Circle (this.position,Vector.getuberVector(_speed, Vector.getRandom(-1,1))));
             }
             break;
 
             case "star": 
-            for (let i:number = 0; i < 20; i++){
+            for (let i:number = 0; i < this.amount; i++){
                 this.particleArray.push(new Star (this.position,Vector.getuberVector(_speed, Vector.getRandom(-1,1))));
             }
             break;
 
             case "heart": 
-            for (let i:number = 0; i < 20; i++){
+            for (let i:number = 0; i < this.amount; i++){
                 this.particleArray.push(new Heart (this.position,Vector.getuberVector(_speed, Vector.getRandom(-1,1))));
             }
             break;
 
             case "rects": 
-            for (let i:number = 0; i < 20; i++){
+            for (let i:number = 0; i < this.amount; i++){
                 this.particleArray.push(new Rectangle (this.position,Vector.getuberVector(_speed, Vector.getRandom(-1,1))));
             }
 
