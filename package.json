@@ -4,7 +4,7 @@
   "description": "doesstuff",
   "main": "",
   "scripts": {
-    "start": "node Endabgabe/server/server.js remote"
+    "start": "node Endabgabe/server/server.js"
   },
   "repository": {
     "type": "git",
