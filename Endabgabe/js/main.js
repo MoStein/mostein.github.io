@@ -10,13 +10,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 var silvester;
 (function (silvester) {
     console.log("main here, how're you doing?");
+    let form;
+    let url = "https://ikaja.herokuapp.com/";
     window.addEventListener("load", handleLoad);
     let canvas;
     let fireworks = [];
+    // let savedArray: FormData [] = [];
     let fps = 100;
     function handleLoad(_event) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("Load");
+            form = document.querySelector("form");
             canvas = document.querySelector("canvas");
             silvester.crc2 = canvas.getContext("2d");
             let btnSubmit = document.getElementById("submit");
@@ -26,6 +30,7 @@ var silvester;
             silvester.crc2.fillRect(0, 0, canvas.width, canvas.height);
             silvester.crc2.fill;
             window.setInterval(update, 1000 / fps);
+            // generateContent(saved[]);
         });
     }
     function handleCanvasClick(_event) {
@@ -35,7 +40,12 @@ var silvester;
     function sendFireWork(_event) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("submit fire work");
-            // let url : string = "https://hyfolia.herokuapp.com/send"
+            let formData = new FormData(form);
+            let query = new URLSearchParams(formData);
+            let response = yield fetch(url + "?" + query.toString());
+            let responseText = yield response.text();
+            // savedArray.push();
+            alert(responseText);
         });
     }
     silvester.sendFireWork = sendFireWork;
