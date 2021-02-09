@@ -11,7 +11,7 @@ var silvester;
 (function (silvester) {
     console.log("main here, how're you doing?");
     let form;
-    let url = "https://ikaja.herokuapp.com";
+    let url = "https://ikaja.herokuapp.com/";
     window.addEventListener("load", handleLoad);
     let canvas;
     let fireworks = [];
