@@ -3,13 +3,12 @@ namespace silvester {
     console.log("main here, how're you doing?");
     export let crc2: CanvasRenderingContext2D;
     let form: HTMLFormElement;
-    let url: string = "https://ikaja.herokuapp.com/"
+    let url: string = "https://ikaja.herokuapp.com"
 
     window.addEventListener("load", handleLoad);
     let canvas: HTMLCanvasElement;
 
     let fireworks: Firework [] = [];
-    // let savedArray: FormData [] = [];
     let fps: number = 100;
 
     async function handleLoad(_event: Event):Promise<void> {
@@ -29,9 +28,6 @@ namespace silvester {
         crc2.fill
 
         window.setInterval(update, 1000/fps);
-
-        // generateContent(saved[]);
-
     }
     
     function handleCanvasClick(_event: MouseEvent): void {
@@ -46,7 +42,6 @@ namespace silvester {
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         let response: Response = await fetch(url + "?" + query.toString());
         let responseText: string = await response.text();
-        // savedArray.push();
         alert(responseText);
     }
     function createFirework (tempPosition: Vector){

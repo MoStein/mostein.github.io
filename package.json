@@ -4,11 +4,11 @@
   "description": "doesstuff",
   "main": "",
   "scripts": {
-    "start": "node Endabgabe/server/server.js remote"
+    "start": "node server/server.js remote"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MoStein/MoStein.github.io.git"
+    "url": "git+https://github.com/MoStein/MoStein.github.io.git/Endabgabe"
   },
   "author": "moritz stein",
   "license": "ISC",
