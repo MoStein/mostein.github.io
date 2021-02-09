@@ -15,6 +15,7 @@ var silvester;
     window.addEventListener("load", handleLoad);
     let canvas;
     let fireworks = [];
+    let savedArray = [];
     let fps = 100;
     function handleLoad(_event) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -42,6 +43,7 @@ var silvester;
             let query = new URLSearchParams(formData);
             let response = yield fetch(url + "?" + query.toString());
             let responseText = yield response.text();
+            savedArray.push(formData);
             alert(responseText);
         });
     }

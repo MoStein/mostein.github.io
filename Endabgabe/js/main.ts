@@ -9,6 +9,7 @@ namespace silvester {
     let canvas: HTMLCanvasElement;
 
     let fireworks: Firework [] = [];
+    let savedArray: any [] = [];
     let fps: number = 100;
 
     async function handleLoad(_event: Event):Promise<void> {
@@ -28,6 +29,8 @@ namespace silvester {
         crc2.fill
 
         window.setInterval(update, 1000/fps);
+        
+        
     }
     
     function handleCanvasClick(_event: MouseEvent): void {
@@ -42,8 +45,11 @@ namespace silvester {
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         let response: Response = await fetch(url + "?" + query.toString());
         let responseText: string = await response.text();
+        savedArray.push(formData);
         alert(responseText);
     }
+    
+    
     function createFirework (tempPosition: Vector){
         console.log("create firework");
 
