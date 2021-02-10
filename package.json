@@ -4,7 +4,7 @@
   "description": "doesstuff",
   "main": "",
   "scripts": {
-    "start": "node Endabgabe/server/server.js remote"
+    "start": "node Endabgabe/server/server.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/MoStein/MoStein.github.io#readme",
   "devDependencies": {
-    "@types/node": "^14.14.8"
+    "@types/node": "^14.14.25"
   },
   "dependencies": {
     "@types/mongodb": "^3.6.6",

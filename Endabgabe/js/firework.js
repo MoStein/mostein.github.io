@@ -4,8 +4,8 @@ var silvester;
         constructor(_position, _type, _color, _speed, _amount, _particleRadius, _lifetime) {
             this.particleArray = [];
             console.log(_lifetime);
-            this.color = _color;
             this.position = _position;
+            this.color = _color;
             this.amount = _amount;
             this.particleRadius = _particleRadius;
             this.lifeTime = _lifetime;

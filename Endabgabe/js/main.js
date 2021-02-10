@@ -1,53 +1,52 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 var silvester;
 (function (silvester) {
     console.log("main here, how're you doing?");
     let form;
     let url = "https://ikaja.herokuapp.com/";
+    // let url: string = "index.html";
     window.addEventListener("load", handleLoad);
     let canvas;
     let fireworks = [];
     let savedArray = [];
     let fps = 100;
-    function handleLoad(_event) {
-        return __awaiter(this, void 0, void 0, function* () {
-            console.log("Load");
-            form = document.querySelector("form");
-            canvas = document.querySelector("canvas");
-            silvester.crc2 = canvas.getContext("2d");
-            let btnSubmit = document.getElementById("submit");
-            canvas.addEventListener("click", handleCanvasClick);
-            btnSubmit.addEventListener("click", sendFireWork);
-            silvester.crc2.fillStyle = "black";
-            silvester.crc2.fillRect(0, 0, canvas.width, canvas.height);
-            silvester.crc2.fill;
-            window.setInterval(update, 1000 / fps);
-        });
+    async function handleLoad(_event) {
+        console.log("Load");
+        form = document.querySelector("form");
+        canvas = document.querySelector("canvas");
+        silvester.crc2 = canvas.getContext("2d");
+        let btnSubmit = document.getElementById("submit");
+        canvas.addEventListener("click", handleCanvasClick);
+        btnSubmit.addEventListener("click", sendFireWork);
+        silvester.crc2.fillStyle = "black";
+        silvester.crc2.fillRect(0, 0, canvas.width, canvas.height);
+        silvester.crc2.fill;
+        window.setInterval(update, 1000 / fps);
+        getSelect();
     }
     function handleCanvasClick(_event) {
         let tempPosition = new silvester.Vector(_event.offsetX, _event.offsetY);
         createFirework(tempPosition);
     }
-    function sendFireWork(_event) {
-        return __awaiter(this, void 0, void 0, function* () {
-            console.log("submit fire work");
-            let formData = new FormData(form);
-            let query = new URLSearchParams(formData);
-            let response = yield fetch(url + "?" + query.toString());
-            let responseText = yield response.text();
-            savedArray.push(formData);
-            alert(responseText);
-        });
+    async function sendFireWork(_event) {
+        console.log("submit fire work");
+        let formData = new FormData(form);
+        let query = new URLSearchParams(formData);
+        let response = await fetch(url + "?" + query.toString());
+        let responseText = await response.text();
+        savedArray.push(formData);
+        alert(responseText);
     }
     silvester.sendFireWork = sendFireWork;
+    async function getSelect() {
+        console.log(savedArray.length);
+        let select = document.getElementById("save");
+        for (let i = 0; i < savedArray.length; i++) {
+            let options = savedArray[i];
+            let element = document.createElement("option");
+            element.textContent = options.name;
+            select.appendChild(element);
+        }
+    }
     function createFirework(tempPosition) {
         console.log("create firework");
         let sound = document.querySelector("audio");

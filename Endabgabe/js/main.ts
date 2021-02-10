@@ -4,6 +4,7 @@ namespace silvester {
     export let crc2: CanvasRenderingContext2D;
     let form: HTMLFormElement;
     let url: string = "https://ikaja.herokuapp.com/"
+    // let url: string = "index.html";
 
     window.addEventListener("load", handleLoad);
     let canvas: HTMLCanvasElement;
@@ -30,7 +31,7 @@ namespace silvester {
 
         window.setInterval(update, 1000/fps);
         
-        
+        getSelect();
     }
     
     function handleCanvasClick(_event: MouseEvent): void {
@@ -47,6 +48,18 @@ namespace silvester {
         let responseText: string = await response.text();
         savedArray.push(formData);
         alert(responseText);
+    }
+    async function getSelect(){
+        console.log(savedArray.length);
+        let select = document.getElementById("save");
+        for (let i: number = 0; i < savedArray.length; i++){
+            let options = savedArray[i];
+            let element = document.createElement("option");
+            element.textContent = options.name;
+            select.appendChild(element);
+    
+        }
+        
     }
     
     

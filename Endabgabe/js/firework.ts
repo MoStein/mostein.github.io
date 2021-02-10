@@ -3,7 +3,7 @@ namespace silvester {
 
         public position: Vector;
         public color: string;
-        public radius: number;
+        public speed: number;
         public amount: number;
         public particleRadius: number;
         private lifeTime: number;
@@ -16,8 +16,8 @@ namespace silvester {
 
         constructor(_position: Vector,_type:string, _color: string, _speed: number,_amount: number, _particleRadius: number, _lifetime: number){
             console.log(_lifetime);
-            this.color = _color;
             this.position = _position;
+            this.color = _color;
             this.amount = _amount;
             this.particleRadius = _particleRadius; 
             this.lifeTime = _lifetime;
