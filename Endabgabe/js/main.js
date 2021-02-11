@@ -1,9 +1,10 @@
+"use strict";
 var silvester;
 (function (silvester) {
     console.log("main here, how're you doing?");
     let form;
     let url = "https://ikaja.herokuapp.com/";
-    // let url: string = "index.html";
+    // let url: string = "http://localhost:5002";
     window.addEventListener("load", handleLoad);
     let canvas;
     let fireworks = [];

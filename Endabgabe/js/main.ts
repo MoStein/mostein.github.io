@@ -4,7 +4,7 @@ namespace silvester {
     export let crc2: CanvasRenderingContext2D;
     let form: HTMLFormElement;
     let url: string = "https://ikaja.herokuapp.com/"
-    // let url: string = "index.html";
+    // let url: string = "http://localhost:5002";
 
     window.addEventListener("load", handleLoad);
     let canvas: HTMLCanvasElement;
@@ -17,10 +17,10 @@ namespace silvester {
         console.log("Load");
 
         form = <HTMLFormElement>document.querySelector("form");
-        canvas = document.querySelector("canvas");
+        canvas = <HTMLCanvasElement>document.querySelector("canvas");
         crc2 = canvas.getContext("2d");
 
-        let btnSubmit: HTMLElement = document.getElementById("submit");
+        let btnSubmit: HTMLElement = <HTMLElement>document.getElementById("submit");
 
         canvas.addEventListener("click", handleCanvasClick);
         btnSubmit.addEventListener("click", sendFireWork);
@@ -51,7 +51,7 @@ namespace silvester {
     }
     async function getSelect(){
         console.log(savedArray.length);
-        let select = document.getElementById("save");
+        let select = <HTMLSelectElement>document.getElementById("save");
         for (let i: number = 0; i < savedArray.length; i++){
             let options = savedArray[i];
             let element = document.createElement("option");
@@ -66,25 +66,25 @@ namespace silvester {
     function createFirework (tempPosition: Vector){
         console.log("create firework");
 
-        let sound = document.querySelector("audio");
+        let sound = <HTMLAudioElement>document.querySelector("audio");
         sound.play();
 
-        let typeTarget: HTMLElement = document.getElementById("type");
+        let typeTarget: HTMLElement = <HTMLTextAreaElement>document.getElementById("type");
         let typeValue = typeTarget.value;
 
-        let colorTarget: HTMLElement = document.getElementById("colour");
+        let colorTarget: HTMLElement = <HTMLSelectElement>document.getElementById("colour");
         let colorValue = colorTarget.value;
 
-        let radiusTarget: HTMLElement = document.getElementById("size");
+        let radiusTarget: HTMLElement = <HTMLInputElement>document.getElementById("size");
         let radiusValue = radiusTarget.value; 
 
-        let amountTarget: HTMLElement = document.getElementById("amount");
+        let amountTarget: HTMLElement = <HTMLInputElement>document.getElementById("amount");
         let amountValue = amountTarget.value;
 
-        let particleTarget: HTMLElement = document.getElementById("pSize");
+        let particleTarget: HTMLElement = <HTMLInputElement>document.getElementById("pSize");
         let particleValue = particleTarget.value;
 
-        let lifeTimeTarget: HTMLElement = document.getElementById("lifetime");
+        let lifeTimeTarget: HTMLElement = <HTMLInputElement>document.getElementById("lifetime");
         let lifeTimeValue = lifeTimeTarget.value;
         
         let firework: Firework = new Firework(tempPosition, typeValue, colorValue, radiusValue, amountValue, particleValue, lifeTimeValue*fps);
