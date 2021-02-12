@@ -5,7 +5,7 @@ import * as Mongo from "mongodb";
 export namespace silvester {
     // let server: Http.Server = Http.createServer();
     interface Bomb {
-        [type: string]: string | string[];
+        [type: string]: string | string[] | undefined;
     }
 
     let bombs: Mongo.Collection;
@@ -50,7 +50,7 @@ export namespace silvester {
             _response.write(jsonString);
 
             if (url.query != undefined) {
-                storeFireworks(<Bomb>url.query);
+                storeFireworks(url.query);
             }
         }
         _response.end();
