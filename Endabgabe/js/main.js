@@ -35,6 +35,8 @@ var silvester;
         console.log("create firework");
         let sound = document.querySelector("audio");
         sound.play();
+        let nameTarget = document.getElementById("name");
+        nameTarget.value;
         let typeTarget = document.getElementById("type");
         let typeValue = typeTarget.value;
         let colorTarget = document.getElementById("colour");

@@ -44,9 +44,9 @@ var silvester;
         }
         _response.end();
     }
-    function storeFireworks(_bomb) {
+    async function storeFireworks(_bomb) {
         // console.log("storing now");
-        bombs.insertOne(_bomb);
+        await bombs.insertOne(_bomb);
     }
 })(silvester = exports.silvester || (exports.silvester = {}));
 //# sourceMappingURL=server.js.map

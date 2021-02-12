@@ -56,9 +56,9 @@ export namespace silvester {
         _response.end();
 
     }
-    function storeFireworks(_bomb: Bomb): void {
+    async function storeFireworks(_bomb: Bomb): Promise<void> {
         // console.log("storing now");
-        bombs.insertOne(_bomb);
+        await bombs.insertOne(_bomb);
     }
 
 

@@ -49,6 +49,9 @@ namespace silvester {
         let sound = <HTMLAudioElement>document.querySelector("audio");
         sound.play();
 
+        let nameTarget: HTMLTextAreaElement = <HTMLTextAreaElement>document.getElementById("name");
+        nameTarget.value;
+
         let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
         let typeValue: string = typeTarget.value;
 
