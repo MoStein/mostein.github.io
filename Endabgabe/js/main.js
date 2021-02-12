@@ -4,7 +4,7 @@ var silvester;
     console.log("main here, how're you doing?");
     let form;
     let url = "https://ikaja.herokuapp.com/";
-    // let url: string = "http://localhost:5002";
+    // let url: string = "http://localhost:5002"; 
     window.addEventListener("load", handleLoad);
     let canvas;
     let fireworks = [];
