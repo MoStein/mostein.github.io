@@ -8,7 +8,7 @@ var silvester;
     window.addEventListener("load", handleLoad);
     let canvas;
     let fireworks = [];
-    // let savedArray: any [] = [];
+    let savedArray = [];
     let fps = 100;
     //Load
     async function handleLoad(_event) {
@@ -23,8 +23,8 @@ var silvester;
         silvester.crc2.fillRect(0, 0, canvas.width, canvas.height);
         silvester.crc2.fill;
         window.setInterval(update, 1000 / fps);
-        // retrieveFireworks();
-        // getSelect();
+        retrieveFireworks();
+        getSelect();
     }
     //Canvas 
     function handleCanvasClick(_event) {
@@ -35,8 +35,6 @@ var silvester;
         console.log("create firework");
         let sound = document.querySelector("audio");
         sound.play();
-        let nameTarget = document.getElementById("name");
-        nameTarget.value;
         let typeTarget = document.getElementById("type");
         let typeValue = typeTarget.value;
         let colorTarget = document.getElementById("colour");
@@ -76,44 +74,44 @@ var silvester;
         alert(responseText);
     }
     silvester.sendFireWork = sendFireWork;
-    // async function retrieveFireworks(): Promise<void> {
-    //     let response : Response = await fetch(url + "?" + "command=retrieve");
-    //     let responseText : string = await response.text();
-    //     savedArray.push(responseText.replace(/<br>/g, " "));
-    // }
-    // async function getSelect(){
-    //     console.log(savedArray.length);
-    //     let select = <HTMLSelectElement>document.getElementById("save");
-    //     for (let i: number = 0; i < savedArray.length; i++){
-    //         let options = savedArray[i];
-    //         let element = document.createElement("option");
-    //         element.textContent = options.name;
-    //         select.appendChild(element);
-    //         element.addEventListener("click", recreateFirework);
-    //     } 
-    // }
-    // function recreateFirework(_event: MouseEvent){
-    //     // let g = <HTMLSelectElement>document.getElementById("saved");
-    //     for (let i: number = 0;i< savedArray.length; i++){
-    //         let g = savedArray[i];
-    //         if (g.click){
-    //         let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
-    //         typeTarget.value = g.fireworktype;
-    //         let colorTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("colour");
-    //         colorTarget.value = g.firworkcolor;
-    //         let speedTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("speed");
-    //         speedTarget.value = g.fireworkspeed;
-    //         let amountTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("amount");
-    //         amountTarget = g.fireworkamount;
-    //         let particleTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("pSize");
-    //         particleTarget = g.fireworkparticle;
-    //         let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
-    //         lifeTimeTarget = g.fireworklifetime;
-    //         }
-    //         else {
-    //             return;
-    //         }
-    //     }
-    // }
+    async function retrieveFireworks() {
+        let response = await fetch(url + "?" + "command=retrieve");
+        let responseText = await response.text();
+        savedArray.push(responseText.replace(/<br>/g, " "));
+    }
+    async function getSelect() {
+        console.log(savedArray.length);
+        let select = document.getElementById("save");
+        for (let i = 0; i < savedArray.length; i++) {
+            let options = savedArray[i];
+            let element = document.createElement("option");
+            element.textContent = options.name;
+            select.appendChild(element);
+            element.addEventListener("click", recreateFirework);
+        }
+    }
+    function recreateFirework(_event) {
+        // let g = <HTMLSelectElement>document.getElementById("saved");
+        for (let i = 0; i < savedArray.length; i++) {
+            let g = savedArray[i];
+            if (g.click) {
+                let typeTarget = document.getElementById("type");
+                typeTarget.value = g.firworktype;
+                let colorTarget = document.getElementById("colour");
+                colorTarget.value = g.firworkcolor;
+                let speedTarget = document.getElementById("speed");
+                speedTarget.value = g.fireworkspeed;
+                let amountTarget = document.getElementById("amount");
+                amountTarget = g.fireworkamount;
+                let particleTarget = document.getElementById("pSize");
+                particleTarget = g.fireworkparticle;
+                let lifeTimeTarget = document.getElementById("lifetime");
+                lifeTimeTarget = g.fireworklifetime;
+            }
+            else {
+                return;
+            }
+        }
+    }
 })(silvester || (silvester = {}));
 //# sourceMappingURL=main.js.map
