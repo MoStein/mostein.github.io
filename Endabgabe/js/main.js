@@ -106,7 +106,7 @@ var silvester;
                 let particleTarget = document.getElementById("pSize");
                 particleTarget = g.fireworkparticle;
                 let lifeTimeTarget = document.getElementById("lifetime");
-                lifeTimeTarget = g.fireworklifetime;
+                lifeTimeTarget = g.fireworklifetime; 
             }
             else {
                 return;
