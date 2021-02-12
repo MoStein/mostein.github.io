@@ -4,14 +4,14 @@ import * as Mongo from "mongodb";
 
 export namespace silvester {
     // let server: Http.Server = Http.createServer();
-    // interface Bomb {
-    //     [type: string]: string | string[] | undefined;
-    // }
+    interface Bomb {
+        [type: string]: string | string[];
+    }
 
-    // let bombs: Mongo.Collection;  
+    let bombs: Mongo.Collection;
 
     let port: number | string | undefined = process.env.PORT;
-    if (port == undefined){
+    if (port == undefined) {
         port = 5002;
     }
 
@@ -27,11 +27,11 @@ export namespace silvester {
         server.addListener("request", handleRequest);
     }
 
-    async function connectToDatabase(_url: string): Promise<void>{
-        let options: Mongo.MongoClientOptions = {useNewUrlParser: true, useUnifiedTopology: true};
+    async function connectToDatabase(_url: string): Promise<void> {
+        let options: Mongo.MongoClientOptions = { useNewUrlParser: true, useUnifiedTopology: true };
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
-        // bombs = mongoClient.db("Silvester").collection("Fireworks");
+        bombs = mongoClient.db("Silvester").collection("Fireworks");
     }
 
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
@@ -40,24 +40,26 @@ export namespace silvester {
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
 
-       if (_request.url){
-           let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
-           for (let key in url.query) {
-            _response.write(key + ":" + url.query[key] + "<br/>");
-        }
-        _response.write("hallo");
-        let jsonString: string = JSON.stringify(url.query);
+        if (_request.url) {
+            let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
+            for (let key in url.query) {
+                _response.write(key + ":" + url.query[key] + "<br/>");
+            }
+            _response.write("hallo");
+            let jsonString: string = JSON.stringify(url.query);
             _response.write(jsonString);
 
-            // storeFireworks(url.query);
-       }
+            if (url.query != undefined) {
+                storeFireworks(<Bomb>url.query);
+            }
+        }
         _response.end();
 
     }
-    // function storeFireworks(_bomb: Bomb): void{
-    //     // console.log("storing now");
-    //     bombs.insertOne(_bomb);
-    // }
-       
+    function storeFireworks(_bomb: Bomb): void {
+        // console.log("storing now");
+        bombs.insertOne(_bomb);
+    }
+
 
 }
