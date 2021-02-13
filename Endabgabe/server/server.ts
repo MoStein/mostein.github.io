@@ -2,6 +2,7 @@ import * as Http from "http";
 import * as Url from "url";
 import * as Mongo from "mongodb";
 
+
 export namespace silvester {
     // let server: Http.Server = Http.createServer();
     interface Bomb {
@@ -46,12 +47,14 @@ export namespace silvester {
                 _response.write(key + ":" + url.query[key] + "<br/>");
             }
             _response.write("hallo");
-            let jsonString: string = JSON.stringify(url.query);
-            _response.write(jsonString);
+            // let jsonString: string = JSON.stringify(url.query);
+            // _response.write(jsonString);
+            let search = location.search.substring(1);
+            JSON.parse('{"' + decodeURI(search).replace(/"/g,'\\"').replace(/&/g, '","').replace(/=/g, '":"')+ '"}');
 
-            if (url.query != undefined) {
+            // if (url.query != undefined) {
                 storeFireworks(url.query);
-            }
+            // }
         }
         _response.end();
 
