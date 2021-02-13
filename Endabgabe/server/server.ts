@@ -16,7 +16,7 @@ export namespace silvester {
         port = 5002;
     }
 
-    let databaseUrl: string = "mongodb+srv://MoStein:olympiamuenchen@cluster0.ywjph.mongodb.net/Fireworks?retryWrites=true&w=majority"
+    let databaseUrl: string = "mongodb+srv://MoStein:N3w-Media@cluster0.j3hzj.mongodb.net/DatenBankEIA2?retryWrites=true&w=majority";
 
     startServer(port);
     connectToDatabase(databaseUrl);
