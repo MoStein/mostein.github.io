@@ -37,11 +37,11 @@ var silvester;
             }
             _response.write("hallo");
             let jsonString = JSON.stringify(url.query);
-            _response.write(jsonString);
-            // let storing = JSON.parse('{"' + decodeURI(jsonString).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
-            // _response.write(storing);
+            // _response.write(jsonString);
+            let storing = JSON.parse('{"' + decodeURI(jsonString).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+            _response.write(storing);
             // if (url.query != undefined) {
-            storeFireworks(url.query);
+            storeFireworks(storing);
             // }
         }
         _response.end();
