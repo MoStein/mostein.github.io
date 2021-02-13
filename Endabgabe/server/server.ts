@@ -53,7 +53,7 @@ export namespace silvester {
             _response.write(storing);
             
             // if (url.query != undefined) {
-                storeFireworks(<Bomb>url.query);
+                storeFireworks(storing);
             // }
         } 
         _response.end();
