@@ -1,16 +1,25 @@
 namespace silvester {
+
+    interface Saved {
+        fireworktype: string;
+        fireworkcolor: string;
+        fireworkspeed: string;
+        fireworkamount: string;
+        fireworkparticle: string;
+        fireworklifetime: string;
+    }
     
     console.log("main here, how're you doing?");
     export let crc2: CanvasRenderingContext2D;
     let form: HTMLFormElement;
-    let url: string = "https://ikaja.herokuapp.com/"
+    let url: string = "https://ikaja.herokuapp.com/";
     // let url: string = "http://localhost:5002"; 
 
     window.addEventListener("load", handleLoad);
     let canvas: HTMLCanvasElement;
 
     let fireworks: Firework [] = [];
-    let savedArray: any [] = [];
+    let savedArray: Saved [] = [];
     let fps: number = 100;
 
     //Load
@@ -97,17 +106,19 @@ namespace silvester {
         alert(responseText);
     }
     async function retrieveFireworks(): Promise<void> {
-        let response : Response = await fetch(url + "?" + "command=retrieve");
-        let responseText : string = await response.text();
-        savedArray.push(responseText);
+        let retrieveUrl: string = "https://ikaja.herokuapp.com/retrieve";
+        let response : Response = await fetch(retrieveUrl);
+        savedArray.push(JSON.parse(await response.text()));
+        // let responseText : string = await response.text();
+        // savedArray.push(responseText);
     }
     async function getSelect(){
         console.log(savedArray.length);
-        let select = <HTMLSelectElement>document.getElementById("save");
+        let select = <HTMLSelectElement>document.getElementById("saved");
         for (let i: number = 0; i < savedArray.length; i++){
             let options = savedArray[i];
             let element = document.createElement("option");
-            element.textContent = options;
+            element.textContent = options.fireworkcolor;
             select.appendChild(element);
             element.addEventListener("click", recreateFirework);
         } 
@@ -115,13 +126,13 @@ namespace silvester {
     function recreateFirework(_event: MouseEvent){
         for (let i: number = 0;i< savedArray.length; i++){
             let g = savedArray[i];
-            if (g.click){
+        //     // if (g.click){
 
             let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
-            typeTarget.value = g.firworktype;
+            typeTarget.value = g.fireworktype;
 
             let colorTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("colour");
-            colorTarget.value = g.firworkcolor;
+            colorTarget.value = g.fireworkcolor;
 
             let speedTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("speed");
             speedTarget.value = g.fireworkspeed;
@@ -134,10 +145,8 @@ namespace silvester {
 
             let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
             lifeTimeTarget.value = g.fireworklifetime;
-            }
-            else {
-                return;
-            }
+            // }
+            
         }
     }
 }
