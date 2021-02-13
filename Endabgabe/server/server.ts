@@ -50,10 +50,10 @@ export namespace silvester {
             // let jsonString: string = JSON.stringify(url.query);
             // _response.write(jsonString);
             let search = location.search.substring(1);
-            JSON.parse('{"' + decodeURI(search).replace(/"/g,'\\"').replace(/&/g, '","').replace(/=/g, '":"')+ '"}');
+            let storing = JSON.parse('{"' + decodeURI(search).replace(/"/g,'\\"').replace(/&/g, '","').replace(/=/g, '":"')+ '"}');
 
             // if (url.query != undefined) {
-                storeFireworks(url.query);
+                storeFireworks(storing);
             // }
         }
         _response.end();
