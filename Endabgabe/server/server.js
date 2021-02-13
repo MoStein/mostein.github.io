@@ -36,10 +36,9 @@ var silvester;
                 _response.write(key + ":" + url.query[key] + "<br/>");
             }
             _response.write("hallo");
-            // let jsonString: string = JSON.stringify(url.query);
-            // _response.write(jsonString);
-            let search = location.search.substring(1);
-            let storing = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+            let jsonString = JSON.stringify(url.query);
+            let storing = JSON.parse('{"' + decodeURI(jsonString).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+            _response.write(storing);
             // if (url.query != undefined) {
             storeFireworks(storing);
             // }
