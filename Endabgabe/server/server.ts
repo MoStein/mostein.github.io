@@ -49,11 +49,11 @@ export namespace silvester {
             _response.write("hallo");
             let jsonString: string = JSON.stringify(url.query);
             _response.write(jsonString);
-            let storing: Bomb = JSON.parse('{"' + decodeURI(jsonString).replace(/"/g,'\\"').replace(/&/g, '","').replace(/=/g, '":"')+ '"}');
+            // let storing: Bomb = JSON.parse('{"' + decodeURI(jsonString).replace(/"/g,'\\"').replace(/&/g, '","').replace(/=/g, '":"')+ '"}');
             // _response.write(storing);
             
             // if (url.query != undefined) {
-                storeFireworks(storing);
+                storeFireworks(url.query);
             // }
         }
         _response.end();
