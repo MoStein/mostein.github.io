@@ -55,7 +55,7 @@ export namespace silvester {
             // if (url.query != undefined) {
                 storeFireworks(<Bomb>url.query);
             // }
-        }
+        } 
         _response.end();
     }
     async function storeFireworks(_bomb: Bomb): Promise<void> {
