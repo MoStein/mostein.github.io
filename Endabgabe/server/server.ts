@@ -48,8 +48,9 @@ export namespace silvester {
             }
             _response.write("hallo");
             let jsonString: string = JSON.stringify(url.query);
-            let storing = JSON.parse('{"' + decodeURI(jsonString).replace(/"/g,'\\"').replace(/&/g, '","').replace(/=/g, '":"')+ '"}');
-            _response.write(storing);
+            _response.write(jsonString);
+            let storing: Bomb = JSON.parse('{"' + decodeURI(jsonString).replace(/"/g,'\\"').replace(/&/g, '","').replace(/=/g, '":"')+ '"}');
+            // _response.write(storing);
             
             // if (url.query != undefined) {
                 storeFireworks(storing);

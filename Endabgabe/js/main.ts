@@ -10,14 +10,14 @@ namespace silvester {
     let canvas: HTMLCanvasElement;
 
     let fireworks: Firework [] = [];
-    let savedArray: any [] = [];
+    // let savedArray: any [] = [];
     let fps: number = 100;
 
     //Load
     async function handleLoad(_event: Event):Promise<void> {
         console.log("Load");
 
-        form = <HTMLFormElement>document.querySelector("form");
+        form = <HTMLFormElement>document.getElementById("form");
         canvas = <HTMLCanvasElement>document.querySelector("canvas");
         crc2 = <CanvasRenderingContext2D>canvas.getContext("2d");
 
@@ -32,8 +32,8 @@ namespace silvester {
 
         window.setInterval(update, 1000/fps);
         
-        retrieveFireworks();
-        getSelect();
+        // retrieveFireworks();
+        // getSelect();
         
     }
     //Canvas 
@@ -96,56 +96,48 @@ namespace silvester {
         let responseText: string = await response.text();
         alert(responseText);
     }
-    async function retrieveFireworks(): Promise<void> {
-        let response : Response = await fetch(url + "?" + "command=retrieve");
-        let responseText : string = await response.text();
-        savedArray.push(responseText.replace(/<br>/g, " "));
-    }
-    async function getSelect(){
-        console.log(savedArray.length);
-        let select = <HTMLSelectElement>document.getElementById("save");
-        for (let i: number = 0; i < savedArray.length; i++){
-            let options = savedArray[i];
-            let element = document.createElement("option");
-            element.textContent = options.name;
-            select.appendChild(element);
-            element.addEventListener("click", recreateFirework);
-        } 
-    }
-    
-    
-    function recreateFirework(_event: MouseEvent){
-        // let g = <HTMLSelectElement>document.getElementById("saved");
-        for (let i: number = 0;i< savedArray.length; i++){
-            let g = savedArray[i];
-            if (g.click){
+    // async function retrieveFireworks(): Promise<void> {
+    //     let response : Response = await fetch(url + "?" + "command=retrieve");
+    //     let responseText : string = await response.text();
+    //     savedArray.push(responseText.replace(/<br>/g, " "));
+    // }
+    // async function getSelect(){
+    //     console.log(savedArray.length);
+    //     let select = <HTMLSelectElement>document.getElementById("save");
+    //     for (let i: number = 0; i < savedArray.length; i++){
+    //         let options = savedArray[i];
+    //         let element = document.createElement("option");
+    //         element.textContent = options.name;
+    //         select.appendChild(element);
+    //         element.addEventListener("click", recreateFirework);
+    //     } 
+    // }
+    // function recreateFirework(_event: MouseEvent){
+    //     for (let i: number = 0;i< savedArray.length; i++){
+    //         let g = savedArray[i];
+    //         if (g.click){
 
-            let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
-            typeTarget.value = g.firworktype;
+    //         let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
+    //         typeTarget.value = g.firworktype;
 
-            let colorTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("colour");
-            colorTarget.value = g.firworkcolor;
+    //         let colorTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("colour");
+    //         colorTarget.value = g.firworkcolor;
 
-            let speedTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("speed");
-            speedTarget.value = g.fireworkspeed;
+    //         let speedTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("speed");
+    //         speedTarget.value = g.fireworkspeed;
 
-            let amountTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("amount");
-            amountTarget = g.fireworkamount;
+    //         let amountTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("amount");
+    //         amountTarget.value = g.fireworkamount;
 
-            let particleTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("pSize");
-            particleTarget = g.fireworkparticle;
+    //         let particleTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("pSize");
+    //         particleTarget.value = g.fireworkparticle;
 
-            let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
-            lifeTimeTarget = g.fireworklifetime;
-            }
-            else {
-                return;
-            }
-        }
-        
-        
-    }
-    
-    
-
+    //         let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
+    //         lifeTimeTarget.value = g.fireworklifetime;
+    //         }
+    //         else {
+    //             return;
+    //         }
+    //     }
+    // }
 }
