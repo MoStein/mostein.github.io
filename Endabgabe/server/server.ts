@@ -4,7 +4,6 @@ import * as Mongo from "mongodb";
 
 
 export namespace silvester {
-    // let server: Http.Server = Http.createServer();
     interface Bomb {
         [type: string]: string | string[];
     }
@@ -52,9 +51,9 @@ export namespace silvester {
             // let storing: Bomb = JSON.parse('{"' + decodeURI(jsonString).replace(/"/g,'\\"').replace(/&/g, '","').replace(/=/g, '":"')+ '"}');
             // _response.write(storing);
             
-            // if (url.query != undefined) {
-                storeFireworks(<Bomb>url.query);
-            // }
+           
+            storeFireworks(<Bomb>url.query);
+            
         } 
         _response.end();
     }

@@ -116,8 +116,7 @@ namespace silvester {
         for (let i: number = 0; i < savedArray.length; i++){
             let options = savedArray[i];
             let element = document.createElement("option");
-            element.textContent = options.fireworkcolor;
-            element.value = options.fireworklifetime;
+            element.textContent = options.fireworkname;
             select.appendChild(element);
             element.addEventListener("click", recreateFirework);
         } 

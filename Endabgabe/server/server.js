@@ -40,9 +40,7 @@ var silvester;
             _response.write(jsonString);
             // let storing: Bomb = JSON.parse('{"' + decodeURI(jsonString).replace(/"/g,'\\"').replace(/&/g, '","').replace(/=/g, '":"')+ '"}');
             // _response.write(storing);
-            // if (url.query != undefined) {
             storeFireworks(url.query);
-            // }
         }
         _response.end();
     }
