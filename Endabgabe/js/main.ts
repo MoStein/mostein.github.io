@@ -123,27 +123,30 @@ namespace silvester {
         } 
         function recreateFirework(_event: Event){
             console.log(select.value);
+            console.log(select.selectedIndex);
+            let saved: Saved = savedArray[select.selectedIndex];
+
             
-            // let nameTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("name");
-            // nameTarget.value = savedArray.fireworkname;
+            let nameTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("name");
+            nameTarget.value = saved.fireworkname;
 
-            // let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
-            // typeTarget.value = savedArray.fireworktype;
+            let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
+            typeTarget.value = saved.fireworktype;
 
-            // let colorTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("colour");
-            // colorTarget.value = savedArray.fireworkcolor;
+            let colorTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("colour");
+            colorTarget.value = saved.fireworkcolor;
 
-            // let speedTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("speed");
-            // speedTarget.value = savedArray.fireworkspeed;
+            let speedTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("speed");
+            speedTarget.value = saved.fireworkspeed;
 
-            // let amountTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("amount");
-            // amountTarget.value = savedArray.fireworkamount;
+            let amountTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("amount");
+            amountTarget.value = saved.fireworkamount;
 
-            // let particleTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("pSize");
-            // particleTarget.value = savedArray.fireworkparticle;
+            let particleTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("pSize");
+            particleTarget.value = saved.fireworkparticle;
 
-            // let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
-            // lifeTimeTarget.value = savedArray.fireworklifetime;
+            let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
+            lifeTimeTarget.value = saved.fireworklifetime;
 
             
         }

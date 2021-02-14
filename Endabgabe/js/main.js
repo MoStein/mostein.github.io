@@ -87,20 +87,22 @@ var silvester;
         }
         function recreateFirework(_event) {
             console.log(select.value);
-            // let nameTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("name");
-            // nameTarget.value = savedArray.fireworkname;
-            // let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
-            // typeTarget.value = savedArray.fireworktype;
-            // let colorTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("colour");
-            // colorTarget.value = savedArray.fireworkcolor;
-            // let speedTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("speed");
-            // speedTarget.value = savedArray.fireworkspeed;
-            // let amountTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("amount");
-            // amountTarget.value = savedArray.fireworkamount;
-            // let particleTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("pSize");
-            // particleTarget.value = savedArray.fireworkparticle;
-            // let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
-            // lifeTimeTarget.value = savedArray.fireworklifetime;
+            console.log(select.selectedIndex);
+            let saved = savedArray[select.selectedIndex];
+            let nameTarget = document.getElementById("name");
+            nameTarget.value = saved.fireworkname;
+            let typeTarget = document.getElementById("type");
+            typeTarget.value = saved.fireworktype;
+            let colorTarget = document.getElementById("colour");
+            colorTarget.value = saved.fireworkcolor;
+            let speedTarget = document.getElementById("speed");
+            speedTarget.value = saved.fireworkspeed;
+            let amountTarget = document.getElementById("amount");
+            amountTarget.value = saved.fireworkamount;
+            let particleTarget = document.getElementById("pSize");
+            particleTarget.value = saved.fireworkparticle;
+            let lifeTimeTarget = document.getElementById("lifetime");
+            lifeTimeTarget.value = saved.fireworklifetime;
         }
     }
 })(silvester || (silvester = {}));
