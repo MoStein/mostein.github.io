@@ -71,6 +71,7 @@ var silvester;
         let query = new URLSearchParams(formData);
         let response = await fetch(url + "?" + query.toString());
         let responseText = await response.text();
+        savedArray.push(JSON.parse(await response.text()));
         alert(responseText);
     }
     silvester.sendFireWork = sendFireWork;

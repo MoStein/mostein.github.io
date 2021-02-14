@@ -104,6 +104,7 @@ namespace silvester {
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         let response: Response = await fetch(url + "?" + query.toString());
         let responseText: string = await response.text();
+        savedArray.push(JSON.parse(await response.text()));
         alert(responseText);
     }
     async function retrieveFireworks(): Promise<void> {
