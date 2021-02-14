@@ -74,8 +74,8 @@ var silvester;
     }
     silvester.sendFireWork = sendFireWork;
     async function retrieveFireworks() {
-        let retrieveUrl = "https://ikaja.herokuapp.com/retrieve";
-        let response = await fetch(retrieveUrl); //url + "?" + "command=retrieve"
+        // let retrieveUrl: string = "https://ikaja.herokuapp.com/retrieve";
+        let response = await fetch(url + "?" + "command=retrieve"); //url + "?" + "command=retrieve"
         savedArray.push(JSON.parse(await response.text()));
     }
     async function createOptions() {
