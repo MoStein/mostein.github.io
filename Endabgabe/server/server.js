@@ -32,6 +32,10 @@ var silvester;
         _response.setHeader("Access-Control-Allow-Origin", "*");
         if (_request.url) {
             let url = Url.parse(_request.url, true);
+            if (url.query["command"] == "retrieve") {
+                let cursor = bombs.find(url.query);
+                _response.write(cursor);
+            }
             for (let key in url.query) {
                 _response.write(key + ":" + url.query[key] + "<br/>");
             }

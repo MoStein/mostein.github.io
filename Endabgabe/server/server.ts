@@ -32,6 +32,7 @@ export namespace silvester {
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
         bombs = mongoClient.db("Silvester").collection("Fireworks");
+        
     }
 
     async function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): Promise<void> {
@@ -42,6 +43,10 @@ export namespace silvester {
 
         if (_request.url) {
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
+            if (url.query["command"]=="retrieve"){
+                let cursor = bombs.find(url.query);
+                _response.write(cursor);
+            }
             for (let key in url.query) {
                 _response.write(key + ":" + url.query[key] + "<br/>");
             }
