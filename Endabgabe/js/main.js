@@ -1,14 +1,6 @@
 "use strict";
 var silvester;
 (function (silvester) {
-    // interface Saved{
-    //     fireworktype: string;
-    //     fireworkcolor: string;
-    //     fireworkspeed: string;
-    //     fireworkamount: string;
-    //     fireworkparticle: string;
-    //     fireworklifetime: string;
-    // }
     console.log("main here, how're you doing?");
     let form;
     let url = "https://ikaja.herokuapp.com/";
@@ -85,9 +77,9 @@ var silvester;
     async function retrieveFireworks() {
         // let retrieveUrl: string = "https://ikaja.herokuapp.com/retrieve";
         let response = await fetch(url + "?" + "command=retrieve");
-        // savedArray.push(JSON.parse(await response.text()));
-        let responseText = await response.text();
-        savedArray.push(responseText);
+        savedArray.push(JSON.parse(await response.text()));
+        // let responseText : string = await response.text();
+        // savedArray.push(responseText);
     }
     async function createOptions() {
         let select = document.getElementById("saved");

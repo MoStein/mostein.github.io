@@ -1,13 +1,13 @@
 namespace silvester {
 
-    // interface Saved{
-    //     fireworktype: string;
-    //     fireworkcolor: string;
-    //     fireworkspeed: string;
-    //     fireworkamount: string;
-    //     fireworkparticle: string;
-    //     fireworklifetime: string;
-    // }
+    interface Saved{
+        fireworktype: string;
+        fireworkcolor: string;
+        fireworkspeed: string;
+        fireworkamount: string;
+        fireworkparticle: string;
+        fireworklifetime: string;
+    }
     
     console.log("main here, how're you doing?");
     export let crc2: CanvasRenderingContext2D;
@@ -19,7 +19,7 @@ namespace silvester {
     let canvas: HTMLCanvasElement;
 
     let fireworks: Firework [] = [];
-    let savedArray: any [] = [];
+    let savedArray: Saved [] = [];
     let fps: number = 100;
 
     //Load
@@ -108,9 +108,9 @@ namespace silvester {
     async function retrieveFireworks(): Promise<void> {
         // let retrieveUrl: string = "https://ikaja.herokuapp.com/retrieve";
         let response : Response = await fetch(url + "?" + "command=retrieve");
-        // savedArray.push(JSON.parse(await response.text()));
-        let responseText : string = await response.text();
-        savedArray.push(responseText);
+        savedArray.push(JSON.parse(await response.text()));
+        // let responseText : string = await response.text();
+        // savedArray.push(responseText);
     }
     async function createOptions(){
         let select = <HTMLSelectElement>document.getElementById("saved");
@@ -128,6 +128,7 @@ namespace silvester {
         for (let key of g){
             savedArray[key]
 
+        
             let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
             typeTarget.value = g.fireworktype;
 
