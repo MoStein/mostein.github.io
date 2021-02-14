@@ -1,14 +1,13 @@
 namespace silvester {
 
-    interface Saved{
-        // fireworkname: string;
-        fireworktype: string;
-        fireworkcolor: string;
-        fireworkspeed: string;
-        fireworkamount: string;
-        fireworkparticle: string;
-        fireworklifetime: string;
-    }
+    // interface Saved{
+    //     fireworktype: string;
+    //     fireworkcolor: string;
+    //     fireworkspeed: string;
+    //     fireworkamount: string;
+    //     fireworkparticle: string;
+    //     fireworklifetime: string;
+    // }
     
     console.log("main here, how're you doing?");
     export let crc2: CanvasRenderingContext2D;
@@ -20,7 +19,7 @@ namespace silvester {
     let canvas: HTMLCanvasElement;
 
     let fireworks: Firework [] = [];
-    let savedArray: Saved [] = [];
+    let savedArray: any [] = [];
     let fps: number = 100;
 
     //Load
@@ -58,9 +57,6 @@ namespace silvester {
 
         let sound = <HTMLAudioElement>document.querySelector("audio");
         sound.play();
-
-        let nameTarget: HTMLTextAreaElement = <HTMLTextAreaElement>document.getElementById("name");
-        nameTarget.value;
 
         let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
         let typeValue: string = typeTarget.value;
@@ -112,9 +108,9 @@ namespace silvester {
     async function retrieveFireworks(): Promise<void> {
         // let retrieveUrl: string = "https://ikaja.herokuapp.com/retrieve";
         let response : Response = await fetch(url + "?" + "command=retrieve");
-        savedArray.push(JSON.parse(await response.text()));
-        // let responseText : string = await response.text();
-        // savedArray.push(responseText);
+        // savedArray.push(JSON.parse(await response.text()));
+        let responseText : string = await response.text();
+        savedArray.push(responseText);
     }
     async function createOptions(){
         let select = <HTMLSelectElement>document.getElementById("saved");
@@ -132,10 +128,6 @@ namespace silvester {
         for (let key of g){
             savedArray[key]
 
-            // let nameTarget: HTMLTextAreaElement = <HTMLTextAreaElement>document.getElementById("name";
-            // nameTarget.value = g.fireworkname;
-            
-        
             let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
             typeTarget.value = g.fireworktype;
 

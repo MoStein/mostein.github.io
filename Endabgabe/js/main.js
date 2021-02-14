@@ -1,6 +1,14 @@
 "use strict";
 var silvester;
 (function (silvester) {
+    // interface Saved{
+    //     fireworktype: string;
+    //     fireworkcolor: string;
+    //     fireworkspeed: string;
+    //     fireworkamount: string;
+    //     fireworkparticle: string;
+    //     fireworklifetime: string;
+    // }
     console.log("main here, how're you doing?");
     let form;
     let url = "https://ikaja.herokuapp.com/";
@@ -35,8 +43,6 @@ var silvester;
         console.log("create firework");
         let sound = document.querySelector("audio");
         sound.play();
-        let nameTarget = document.getElementById("name");
-        nameTarget.value;
         let typeTarget = document.getElementById("type");
         let typeValue = typeTarget.value;
         let colorTarget = document.getElementById("colour");
@@ -79,9 +85,9 @@ var silvester;
     async function retrieveFireworks() {
         // let retrieveUrl: string = "https://ikaja.herokuapp.com/retrieve";
         let response = await fetch(url + "?" + "command=retrieve");
-        savedArray.push(JSON.parse(await response.text()));
-        // let responseText : string = await response.text();
-        // savedArray.push(responseText);
+        // savedArray.push(JSON.parse(await response.text()));
+        let responseText = await response.text();
+        savedArray.push(responseText);
     }
     async function createOptions() {
         let select = document.getElementById("saved");
@@ -98,8 +104,6 @@ var silvester;
         let g = savedArray.keys();
         for (let key of g) {
             savedArray[key];
-            // let nameTarget: HTMLTextAreaElement = <HTMLTextAreaElement>document.getElementById("name";
-            // nameTarget.value = g.fireworkname;
             let typeTarget = document.getElementById("type");
             typeTarget.value = g.fireworktype;
             let colorTarget = document.getElementById("colour");
