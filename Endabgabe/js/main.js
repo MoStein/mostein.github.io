@@ -23,7 +23,6 @@ var silvester;
         silvester.crc2.fill;
         window.setInterval(update, 1000 / fps);
         retrieveFireworks();
-        createOptions();
     }
     //Canvas 
     function handleCanvasClick(_event) {
@@ -77,6 +76,8 @@ var silvester;
         let response = await fetch(url + "?" + "command=retrieve"); //url + "?" + "command=retrieve"
         savedArray.push(JSON.parse(await response.text()));
         console.log(savedArray.length);
+        console.log(savedArray);
+        createOptions();
     }
     async function createOptions() {
         let select = document.getElementById("saved");

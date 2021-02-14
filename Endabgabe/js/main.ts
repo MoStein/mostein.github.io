@@ -42,7 +42,7 @@ namespace silvester {
         window.setInterval(update, 1000/fps);
         
         retrieveFireworks();
-        createOptions();
+        
         
     }
     //Canvas 
@@ -109,6 +109,8 @@ namespace silvester {
         let response : Response = await fetch(url + "?" + "command=retrieve"); //url + "?" + "command=retrieve"
         savedArray.push(JSON.parse(await response.text()));
         console.log(savedArray.length);
+        console.log(savedArray);
+        createOptions();
         
     }
     async function createOptions(){
