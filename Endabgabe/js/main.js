@@ -7,7 +7,6 @@ var silvester;
     window.addEventListener("load", handleLoad);
     let canvas;
     let fireworks = [];
-    // let savedArray: Saved [] = [];
     let fps = 100;
     //Load
     async function handleLoad(_event) {
@@ -86,15 +85,14 @@ var silvester;
             select.addEventListener("change", recreateFirework);
         }
         function recreateFirework(_event) {
-            console.log(select.value);
-            console.log(select.selectedIndex);
             let saved = savedArray[select.selectedIndex];
+            console.log(saved.fireworklifetime);
             let nameTarget = document.getElementById("name");
             nameTarget.value = saved.fireworkname;
             let typeTarget = document.getElementById("type");
             typeTarget.value = saved.fireworktype;
             let colorTarget = document.getElementById("colour");
-            colorTarget.value = saved.fireworkcolor;
+            colorTarget.value = saved.fireworkcolour;
             let speedTarget = document.getElementById("speed");
             speedTarget.value = saved.fireworkspeed;
             let amountTarget = document.getElementById("amount");

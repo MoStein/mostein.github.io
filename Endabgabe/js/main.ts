@@ -4,7 +4,7 @@ namespace silvester {
         _id: number
         fireworkname: string;
         fireworktype: string;
-        fireworkcolor: string;
+        fireworkcolour: string;
         fireworkspeed: string;
         fireworkamount: string;
         fireworkparticle: string;
@@ -20,7 +20,6 @@ namespace silvester {
     let canvas: HTMLCanvasElement;
 
     let fireworks: Firework [] = [];
-    // let savedArray: Saved [] = [];
     let fps: number = 100;
 
     //Load
@@ -122,10 +121,8 @@ namespace silvester {
 
         } 
         function recreateFirework(_event: Event){
-            console.log(select.value);
-            console.log(select.selectedIndex);
             let saved: Saved = savedArray[select.selectedIndex];
-
+            console.log(saved.fireworklifetime);
             
             let nameTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("name");
             nameTarget.value = saved.fireworkname;
@@ -134,7 +131,7 @@ namespace silvester {
             typeTarget.value = saved.fireworktype;
 
             let colorTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("colour");
-            colorTarget.value = saved.fireworkcolor;
+            colorTarget.value = saved.fireworkcolour;
 
             let speedTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("speed");
             speedTarget.value = saved.fireworkspeed;
