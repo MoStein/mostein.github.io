@@ -7,7 +7,7 @@ var silvester;
     window.addEventListener("load", handleLoad);
     let canvas;
     let fireworks = [];
-    let savedArray = [];
+    // let savedArray: Saved [] = [];
     let fps = 100;
     //Load
     async function handleLoad(_event) {
@@ -74,40 +74,48 @@ var silvester;
     silvester.sendFireWork = sendFireWork;
     async function retrieveFireworks() {
         let response = await fetch(url + "?" + "command=retrieve"); //url + "?" + "command=retrieve"
-        savedArray.push(JSON.parse(await response.text()));
+        let savedArray = (JSON.parse(await response.text()));
         console.log(savedArray.length);
         console.log(savedArray);
-        createOptions();
-    }
-    async function createOptions() {
         let select = document.getElementById("saved");
         for (let i = 0; i < savedArray.length; i++) {
             let options = savedArray[i];
             let element = document.createElement("option");
             element.textContent = options.fireworkname;
             select.appendChild(element);
-            element.addEventListener("click", recreateFirework);
+            // element.addEventListener("click", recreateFirework);
         }
+        // createOptions();
     }
-    function recreateFirework(_event) {
-        let g = savedArray.keys();
-        for (let key of g) {
-            savedArray[key];
-            let nameTarget = document.getElementById("name");
-            nameTarget.value = g.fireworkname;
-            let typeTarget = document.getElementById("type");
-            typeTarget.value = g.fireworktype;
-            let colorTarget = document.getElementById("colour");
-            colorTarget.value = g.fireworkcolor;
-            let speedTarget = document.getElementById("speed");
-            speedTarget.value = g.fireworkspeed;
-            let amountTarget = document.getElementById("amount");
-            amountTarget.value = g.fireworkamount;
-            let particleTarget = document.getElementById("pSize");
-            particleTarget.value = g.fireworkparticle;
-            let lifeTimeTarget = document.getElementById("lifetime");
-            lifeTimeTarget.value = g.fireworklifetime;
-        }
-    }
+    // async function createOptions(){
+    //     let select = <HTMLSelectElement>document.getElementById("saved");
+    //     for (let i: number = 0; i < savedArray.length; i++){
+    //         let options = savedArray[i];
+    //         let element = document.createElement("option");
+    //         element.textContent = options.fireworkname;
+    //         select.appendChild(element);
+    //         element.addEventListener("click", recreateFirework);
+    //     } 
+    // }
+    // function recreateFirework(_event: MouseEvent){
+    //     let g: any = savedArray.keys();
+    //     for (let key of g){
+    //         savedArray[key]
+    //         let nameTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("name");
+    //         nameTarget.value = g.fireworkname;
+    //         let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
+    //         typeTarget.value = g.fireworktype;
+    //         let colorTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("colour");
+    //         colorTarget.value = g.fireworkcolor;
+    //         let speedTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("speed");
+    //         speedTarget.value = g.fireworkspeed;
+    //         let amountTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("amount");
+    //         amountTarget.value = g.fireworkamount;
+    //         let particleTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("pSize");
+    //         particleTarget.value = g.fireworkparticle;
+    //         let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
+    //         lifeTimeTarget.value = g.fireworklifetime;
+    //     }
+    // }
 })(silvester || (silvester = {}));
 //# sourceMappingURL=main.js.map
