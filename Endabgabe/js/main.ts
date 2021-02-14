@@ -1,5 +1,4 @@
 namespace silvester {
-
     interface Saved{
         _id: number
         fireworkname: string;
