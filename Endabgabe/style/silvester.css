@@ -34,7 +34,7 @@ aside {
 button{
     border: 0;
     background-color: grey;
-    align: center;
+    /* align: center; */
     padding: 5px 10px;
     width: auto;
     cursor: pointer;

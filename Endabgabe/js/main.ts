@@ -118,55 +118,32 @@ namespace silvester {
             let element = document.createElement("option");
             element.textContent = options.fireworkname;
             select.appendChild(element);
-            select.addEventListener("click", recreateFirework);
+            select.addEventListener("change", recreateFirework);
 
+        } 
+        function recreateFirework(_event: Event){
+            console.log(select.value);
             
-
-            // let g = savedArray[i];
-            
-
             // let nameTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("name");
-            // nameTarget.value = g.fireworkname;
-        
+            // nameTarget.value = savedArray.fireworkname;
+
             // let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
-            // typeTarget.value = g.fireworktype;
+            // typeTarget.value = savedArray.fireworktype;
 
             // let colorTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("colour");
-            // colorTarget.value = g.fireworkcolor;
+            // colorTarget.value = savedArray.fireworkcolor;
 
             // let speedTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("speed");
-            // speedTarget.value = g.fireworkspeed;
+            // speedTarget.value = savedArray.fireworkspeed;
 
             // let amountTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("amount");
-            // amountTarget.value = g.fireworkamount;
+            // amountTarget.value = savedArray.fireworkamount;
 
             // let particleTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("pSize");
-            // particleTarget.value = g.fireworkparticle;
+            // particleTarget.value = savedArray.fireworkparticle;
 
             // let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
-            // lifeTimeTarget.value = g.fireworklifetime;
-        } 
-        function recreateFirework(_event: MouseEvent){
-            let nameTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("name");
-            nameTarget.value = savedArray.fireworkname;
-
-            let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
-            typeTarget.value = savedArray.fireworktype;
-
-            let colorTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("colour");
-            colorTarget.value = savedArray.fireworkcolor;
-
-            let speedTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("speed");
-            speedTarget.value = savedArray.fireworkspeed;
-
-            let amountTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("amount");
-            amountTarget.value = savedArray.fireworkamount;
-
-            let particleTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("pSize");
-            particleTarget.value = savedArray.fireworkparticle;
-
-            let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
-            lifeTimeTarget.value = savedArray.fireworklifetime;
+            // lifeTimeTarget.value = savedArray.fireworklifetime;
 
             
         }
