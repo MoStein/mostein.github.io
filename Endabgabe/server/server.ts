@@ -46,6 +46,7 @@ export namespace silvester {
                 let jsonString = JSON.stringify(await bombs.find().toArray());
                 _response.write(jsonString);
             }
+            else {
             // for (let key in url.query) {
             //     _response.write(key + ":" + url.query[key] + "<br/>");
             // }
@@ -57,6 +58,7 @@ export namespace silvester {
             
            
             storeFireworks(<Bomb>url.query);
+            }
             
         } 
         _response.end();

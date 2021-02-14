@@ -36,15 +36,17 @@ var silvester;
                 let jsonString = JSON.stringify(await bombs.find().toArray());
                 _response.write(jsonString);
             }
-            // for (let key in url.query) {
-            //     _response.write(key + ":" + url.query[key] + "<br/>");
-            // }
-            _response.write("hallo");
-            let jsonString = JSON.stringify(url.query);
-            _response.write(jsonString);
-            // let storing: Bomb = JSON.parse('{"' + decodeURI(jsonString).replace(/"/g,'\\"').replace(/&/g, '","').replace(/=/g, '":"')+ '"}');
-            // _response.write(storing);
-            storeFireworks(url.query);
+            else {
+                // for (let key in url.query) {
+                //     _response.write(key + ":" + url.query[key] + "<br/>");
+                // }
+                _response.write("hallo");
+                let jsonString = JSON.stringify(url.query);
+                _response.write(jsonString);
+                // let storing: Bomb = JSON.parse('{"' + decodeURI(jsonString).replace(/"/g,'\\"').replace(/&/g, '","').replace(/=/g, '":"')+ '"}');
+                // _response.write(storing);
+                storeFireworks(url.query);
+            }
         }
         _response.end();
     }
