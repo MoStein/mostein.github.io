@@ -43,7 +43,8 @@ export namespace silvester {
         if (_request.url) {
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
             if (url.query["command"]=="retrieve"){
-                _response.write(bombs.find(url.query));
+                let coursor = bombs.find({});
+                _response.write(coursor);
             }
             // for (let key in url.query) {
             //     _response.write(key + ":" + url.query[key] + "<br/>");
