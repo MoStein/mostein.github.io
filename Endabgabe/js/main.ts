@@ -118,6 +118,29 @@ namespace silvester {
             let element = document.createElement("option");
             element.textContent = options.fireworkname;
             select.appendChild(element);
+
+            let g = savedArray[i];
+
+            let nameTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("name");
+            nameTarget.value = g.fireworkname;
+        
+            let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
+            typeTarget.value = g.fireworktype;
+
+            let colorTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("colour");
+            colorTarget.value = g.fireworkcolor;
+
+            let speedTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("speed");
+            speedTarget.value = g.fireworkspeed;
+
+            let amountTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("amount");
+            amountTarget.value = g.fireworkamount;
+
+            let particleTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("pSize");
+            particleTarget.value = g.fireworkparticle;
+
+            let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
+            lifeTimeTarget.value = g.fireworklifetime;
             // element.addEventListener("click", recreateFirework);
         } 
         
