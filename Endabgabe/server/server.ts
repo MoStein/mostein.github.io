@@ -43,7 +43,7 @@ export namespace silvester {
         if (_request.url) {
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
             if (url.query["command"]=="retrieve"){
-                let jsonString = JSON.stringify(await bombs.find().toArray());
+                let jsonString = JSON.stringify(await bombs.find());
                 _response.write(jsonString);
             }
             else {
