@@ -4,7 +4,6 @@ var silvester;
     console.log("main here, how're you doing?");
     let form;
     let url = "https://ikaja.herokuapp.com/";
-    // let url: string = "http://localhost:5002"; 
     window.addEventListener("load", handleLoad);
     let canvas;
     let fireworks = [];
@@ -78,8 +77,6 @@ var silvester;
         let retrieveUrl = "https://ikaja.herokuapp.com/retrieve";
         let response = await fetch(retrieveUrl); //url + "?" + "command=retrieve"
         savedArray.push(JSON.parse(await response.text()));
-        // let responseText : string = await response.text();
-        // savedArray.push(responseText);
     }
     async function createOptions() {
         let select = document.getElementById("saved");
@@ -96,6 +93,8 @@ var silvester;
         let g = savedArray.keys();
         for (let key of g) {
             savedArray[key];
+            let nameTarget = document.getElementById("name");
+            nameTarget.value = g.fireworkname;
             let typeTarget = document.getElementById("type");
             typeTarget.value = g.fireworktype;
             let colorTarget = document.getElementById("colour");

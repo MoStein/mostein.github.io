@@ -1,6 +1,7 @@
 namespace silvester {
 
     interface Saved{
+        fireworkname: string;
         fireworktype: string;
         fireworkcolor: string;
         fireworkspeed: string;
@@ -13,7 +14,6 @@ namespace silvester {
     export let crc2: CanvasRenderingContext2D;
     let form: HTMLFormElement;
     let url: string = "https://ikaja.herokuapp.com/";
-    // let url: string = "http://localhost:5002"; 
 
     window.addEventListener("load", handleLoad);
     let canvas: HTMLCanvasElement;
@@ -109,8 +109,7 @@ namespace silvester {
         let retrieveUrl: string = "https://ikaja.herokuapp.com/retrieve";
         let response : Response = await fetch(retrieveUrl); //url + "?" + "command=retrieve"
         savedArray.push(JSON.parse(await response.text()));
-        // let responseText : string = await response.text();
-        // savedArray.push(responseText);
+        
     }
     async function createOptions(){
         let select = <HTMLSelectElement>document.getElementById("saved");
@@ -128,6 +127,8 @@ namespace silvester {
         for (let key of g){
             savedArray[key]
 
+            let nameTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("name");
+            nameTarget.value = g.fireworkname;
         
             let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
             typeTarget.value = g.fireworktype;
@@ -146,8 +147,6 @@ namespace silvester {
 
             let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
             lifeTimeTarget.value = g.fireworklifetime;
-            
-            
         }
     }
 }
