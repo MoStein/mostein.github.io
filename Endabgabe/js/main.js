@@ -24,7 +24,7 @@ var silvester;
         silvester.crc2.fill;
         window.setInterval(update, 1000 / fps);
         retrieveFireworks();
-        getSelect();
+        createOptions();
     }
     //Canvas 
     function handleCanvasClick(_event) {
@@ -81,21 +81,23 @@ var silvester;
         // let responseText : string = await response.text();
         // savedArray.push(responseText);
     }
-    async function getSelect() {
-        console.log(savedArray.length);
+    async function createOptions() {
         let select = document.getElementById("saved");
         for (let i = 0; i < savedArray.length; i++) {
             let options = savedArray[i];
             let element = document.createElement("option");
             element.textContent = options.fireworkcolor;
+            element.value = options.fireworklifetime;
             select.appendChild(element);
             element.addEventListener("click", recreateFirework);
         }
     }
     function recreateFirework(_event) {
-        for (let i = 0; i < savedArray.length; i++) {
-            let g = savedArray[i];
-            //     // if (g.click){
+        let g = savedArray.keys();
+        for (let key of g) {
+            savedArray[key];
+            // let nameTarget: HTMLTextAreaElement = <HTMLTextAreaElement>document.getElementById("name";
+            // nameTarget.value = g.fireworkname;
             let typeTarget = document.getElementById("type");
             typeTarget.value = g.fireworktype;
             let colorTarget = document.getElementById("colour");
@@ -108,7 +110,6 @@ var silvester;
             particleTarget.value = g.fireworkparticle;
             let lifeTimeTarget = document.getElementById("lifetime");
             lifeTimeTarget.value = g.fireworklifetime;
-            // }
         }
     }
 })(silvester || (silvester = {}));

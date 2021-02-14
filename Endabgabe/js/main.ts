@@ -1,6 +1,7 @@
 namespace silvester {
 
-    interface Saved {
+    interface Saved{
+        // fireworkname: string;
         fireworktype: string;
         fireworkcolor: string;
         fireworkspeed: string;
@@ -42,7 +43,7 @@ namespace silvester {
         window.setInterval(update, 1000/fps);
         
         retrieveFireworks();
-        getSelect();
+        createOptions();
         
     }
     //Canvas 
@@ -112,22 +113,26 @@ namespace silvester {
         // let responseText : string = await response.text();
         // savedArray.push(responseText);
     }
-    async function getSelect(){
-        console.log(savedArray.length);
+    async function createOptions(){
         let select = <HTMLSelectElement>document.getElementById("saved");
         for (let i: number = 0; i < savedArray.length; i++){
             let options = savedArray[i];
             let element = document.createElement("option");
             element.textContent = options.fireworkcolor;
+            element.value = options.fireworklifetime;
             select.appendChild(element);
             element.addEventListener("click", recreateFirework);
         } 
     }
     function recreateFirework(_event: MouseEvent){
-        for (let i: number = 0;i< savedArray.length; i++){
-            let g = savedArray[i];
-        //     // if (g.click){
+        let g: any = savedArray.keys();
+        for (let key of g){
+            savedArray[key]
 
+            // let nameTarget: HTMLTextAreaElement = <HTMLTextAreaElement>document.getElementById("name";
+            // nameTarget.value = g.fireworkname;
+            
+        
             let typeTarget: HTMLSelectElement = <HTMLSelectElement>document.getElementById("type");
             typeTarget.value = g.fireworktype;
 
@@ -145,7 +150,7 @@ namespace silvester {
 
             let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
             lifeTimeTarget.value = g.fireworklifetime;
-            // }
+            
             
         }
     }
