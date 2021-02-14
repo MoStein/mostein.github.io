@@ -106,8 +106,8 @@ namespace silvester {
         alert(responseText);
     }
     async function retrieveFireworks(): Promise<void> {
-        // let retrieveUrl: string = "https://ikaja.herokuapp.com/retrieve";
-        let response : Response = await fetch(url + "?" + "command=retrieve");
+        let retrieveUrl: string = "https://ikaja.herokuapp.com/retrieve";
+        let response : Response = await fetch(retrieveUrl); //url + "?" + "command=retrieve"
         savedArray.push(JSON.parse(await response.text()));
         // let responseText : string = await response.text();
         // savedArray.push(responseText);
