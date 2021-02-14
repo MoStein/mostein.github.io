@@ -2,7 +2,6 @@ import * as Http from "http";
 import * as Url from "url";
 import * as Mongo from "mongodb";
 
-
 export namespace silvester {
     interface Bomb {
         [type: string]: string | string[];
@@ -44,8 +43,7 @@ export namespace silvester {
         if (_request.url) {
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
             if (url.query["command"]=="retrieve"){
-                let cursor = bombs.find({});
-                _response.write(cursor);
+                _response.write(bombs.find(url.query));
             }
             // for (let key in url.query) {
             //     _response.write(key + ":" + url.query[key] + "<br/>");
