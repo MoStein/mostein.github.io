@@ -10,7 +10,6 @@ namespace silvester {
         fireworkparticle: string;
         fireworklifetime: string;
     }
-    
     console.log("main here, how're you doing?");
     export let crc2: CanvasRenderingContext2D;
     let form: HTMLFormElement;
@@ -40,10 +39,7 @@ namespace silvester {
         crc2.fill
 
         window.setInterval(update, 1000/fps);
-        
         retrieveFireworks();
-        
-        
     }
     //Canvas 
     function handleCanvasClick(_event: MouseEvent): void {
