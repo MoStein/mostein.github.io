@@ -106,10 +106,9 @@ namespace silvester {
         alert(responseText);
     }
     async function retrieveFireworks(): Promise<void> {
-        let response : Response = await fetch(url + "?" + "command=retrieve"); //url + "?" + "command=retrieve"
+        let response : Response = await fetch(url + "?" + "command=retrieve"); 
         let savedArray:Saved[] = (JSON.parse(await response.text()));
-        console.log(savedArray.length);
-        console.log(savedArray);
+        
 
         let select = <HTMLSelectElement>document.getElementById("saved");
         for (let i: number = 0; i < savedArray.length; i++){
@@ -122,7 +121,6 @@ namespace silvester {
         } 
         function recreateFirework(_event: Event){
             let saved: Saved = savedArray[select.selectedIndex];
-            console.log(saved.fireworklifetime);
             
             let nameTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("name");
             nameTarget.value = saved.fireworkname;
@@ -144,8 +142,6 @@ namespace silvester {
 
             let lifeTimeTarget: HTMLInputElement = <HTMLInputElement>document.getElementById("lifetime");
             lifeTimeTarget.value = saved.fireworklifetime;
-
-            
         }
     }
 }

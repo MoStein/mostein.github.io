@@ -72,10 +72,8 @@ var silvester;
     }
     silvester.sendFireWork = sendFireWork;
     async function retrieveFireworks() {
-        let response = await fetch(url + "?" + "command=retrieve"); //url + "?" + "command=retrieve"
+        let response = await fetch(url + "?" + "command=retrieve");
         let savedArray = (JSON.parse(await response.text()));
-        console.log(savedArray.length);
-        console.log(savedArray);
         let select = document.getElementById("saved");
         for (let i = 0; i < savedArray.length; i++) {
             let options = savedArray[i];
@@ -86,7 +84,6 @@ var silvester;
         }
         function recreateFirework(_event) {
             let saved = savedArray[select.selectedIndex];
-            console.log(saved.fireworklifetime);
             let nameTarget = document.getElementById("name");
             nameTarget.value = saved.fireworkname;
             let typeTarget = document.getElementById("type");
