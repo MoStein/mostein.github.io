@@ -1,0 +1,224 @@
+Partei_kurz:;"&#x1F464; PPS"
+Partei_lang:;"Partía Popular Sorvegno"
+Partei_deutsch:;"Sorvische Volkspartei"
+Partei_Beschreibung:;"Konservativismus liberaler Konservativismus"
+Partei_Europa:;"EVP"
+Partei_URL:;"https://www.appelpartei.ap"
+Partei_Bild:;"data/appel.png"
+-1;""
+1;""
+1;""
+1;""
+1;""
+-1;""
+-1;
+#
+Partei_kurz:;"PD"
+Partei_lang:;"Partía Democratia"
+Partei_deutsch:;"Demokratische Partei"
+Partei_Beschreibung:;"Liberalismus Linksliberalismus Sozialliberalismus"
+Partei_Europa:;"ALDE - ReNew Europe"
+Partei_URL:;"https://www.banane.ba"
+Partei_Bild:;"data/banane.jpg"
+-1;""
+-1;""
+-1;""
+-1;"m"
+1;""
+1;""
+#;
+Partei_kurz:;"&#x1F464; PS"
+Partei_lang:;"Partía Socialista"
+Partei_deutsch:;"Sozialistische Partei"
+Partei_Beschreibung:;"Sozialdemokratie demokratischer Sozialismus"
+Partei_Europa:;"SPE"
+Partei_URL:;"https://www.die-citronen.ca"
+Partei_Bild:;"data/tbc.gif"
+-1;
+-1;
+-1;
+1;
+1;
+-1;
+#
+Partei_kurz:;"LS"
+Partei_lang:;"Libertea Sorvegna"
+Partei_deutsch:;"Sorvische Freiheit"
+Partei_Beschreibung:;"Rechtspopulisus EU Skepsis"
+Partei_Europa:;"ID"
+Partei_URL:;"http://www.neutrale-partei.np"
+Partei_Bild:;"data/egal.png"
+1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+1;
+#
+Partei_kurz:;"CEDEIA"
+Partei_lang:;"Cedeia la Sorvá"
+Partei_deutsch:;"Aufbruch Sorvien"
+Partei_Beschreibung:;"demokratischer Sozialismus Linkspopulistismus"
+Partei_Europa:;"Now The People"
+Partei_URL:;"http://www.neutrale-partei.np"
+Partei_Bild:;"data/egal.png"
+-1;Ist uns egal.
+-1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+-1;
+#
+Partei_kurz:;"Verta"
+Partei_lang:;"Partía Ecologique Verta"
+Partei_deutsch:;"Ökologische Partei die Grünen"
+Partei_Beschreibung:;"Grüne"
+Partei_Europa:;"EGP"
+Partei_URL:;"http://www.neutrale-partei.np"
+Partei_Bild:;"data/egal.png"
+-1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+-1;Ist uns egal.
+1;
+#
+Partei_kurz:;"PDG"
+Partei_lang:;"Partía Democratía Gocia"
+Partei_deutsch:;"Linksdemokratische Partei"
+Partei_Beschreibung:;"Links EU Skepsis"
+Partei_Europa:;"EL"
+Partei_URL:;"http://www.neutrale-partei.np"
+Partei_Bild:;"data/egal.png"
+1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+-1;Ist uns egal.
+1;
+
+#
+Partei_kurz:;"APS"
+Partei_lang:;"Allianza pro Sorvá"
+Partei_deutsch:;"Allianz für Sorvien"
+Partei_Beschreibung:;"Nationalliberalismus Konservativismus"
+Partei_Europa:;"EKR"
+Partei_URL:;"http://www.neutrale-partei.np"
+Partei_Bild:;"data/egal.png"
+1;Ist uns egal.
+0;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+1;
+#
+Partei_kurz:;"PL"
+Partei_lang:;"Partía Liberal"
+Partei_deutsch:;"Liberale Partei"
+Partei_Beschreibung:;"Liberalismus"
+Partei_Europa:;"ALDE ReNew Europe"
+Partei_URL:;"http://www.neutrale-partei.np"
+Partei_Bild:;"data/egal.png"
+-1;Ist uns egal.
+1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+1;
+#
+Partei_kurz:;"EPES/Volt"
+Partei_lang:;"Ensamblia pro L'Europa et Sorvá acon Volt"
+Partei_deutsch:;"Geminsam für Europa und Sorvien mit Volt"
+Partei_Beschreibung:;"Paneuropäismus"
+Partei_Europa:;"GPE"
+Partei_URL:;"http://www.neutrale-partei.np"
+Partei_Bild:;"data/egal.png"
+-1;Ist uns egal.
+-1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+1;Ist uns egal.
+1;Ist uns egal.
+-1;
+#
+Partei_kurz:;"PFE"
+Partei_lang:;"Paría Feminista et Equalitia"
+Partei_deutsch:;"Partei für Feminismus und Gleichheit"
+Partei_Beschreibung:;"Feminismus Gleichstellung Minderheitsrechte"
+Partei_Europa:;"GPE"
+Partei_URL:;"http://www.neutrale-partei.np"
+Partei_Bild:;"data/egal.png"
+-1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+-1;
+#
+Partei_kurz:;"UB"
+Partei_lang:;"Union Burgiora"
+Partei_deutsch:;"Bürgerliche Union"
+Partei_Beschreibung:;"Rechtspopulisus EU Skepsis"
+Partei_Europa:;"ID"
+Partei_URL:;"http://www.neutrale-partei.np"
+Partei_Bild:;"data/egal.png"
+-1;Ist uns egal.
+1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+1;Ist uns egal.
+-1;
+#
+Partei_kurz:;"FEZ"
+Partei_lang:;"Li Federalista"
+Partei_deutsch:;"Die Föderalisten"
+Partei_Beschreibung:;"Föderalismus Separatismus"
+Partei_Europa:;"EFA"
+Partei_URL:;"http://www.neutrale-partei.np"
+Partei_Bild:;"data/egal.png"
+0;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+1;
+#
+Partei_kurz:;"PM"
+Partei_lang:;"Partía Marxista"
+Partei_deutsch:;"Marxistische Partei"
+Partei_Beschreibung:;"Marxismus EU Skepsis"
+Partei_Europa:;""
+Partei_URL:;"http://www.neutrale-partei.np"
+Partei_Bild:;"data/egal.png"
+1;Ist uns egal.
+-1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+1;
+#
+Partei_kurz:;"NP"
+Partei_lang:;"Nosta Patria"
+Partei_deutsch:;"Unser Vaterland"
+Partei_Beschreibung:;"Rechtsextremismus"
+Partei_Europa:;"ID"
+Partei_URL:;"http://www.neutrale-partei.np"
+Partei_Bild:;"data/egal.png"
+1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+1;Ist uns egal.
+-1;Ist uns egal.
+-1;Ist uns egal.
+1;
+
