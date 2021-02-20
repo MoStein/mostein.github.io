@@ -54,83 +54,67 @@
 	"lists": {
 		"0": {
 			"name": "Partía Popular Sorvegno",
-			"name_x": "PPS",
-			"position": "liberaler Konservativismus"
+			"name_x": "PPS"
 		},
 		"1": {
 			"name": "Partía Democratia",
-			"name_x": "PD",
-			"position": "Linksliberalismus"
+			"name_x": "PD"
 		},
 		"2": {
 			"name": "Partía Socialistica",
-			"name_x": "PS",
-			"position": "Sozialdemokratie"
+			"name_x": "PS"
 		},
 		"3": {
 			"name": "Libertea Servegno",
-			"name_x": "LS",
-			"position": "Rechtspopulismus, EU Skepsis"
+			"name_x": "LS"
 		},
 		"4": {
 			"name": "Cedeia la Republica",
-			"name_x": "CEDEIA",
-			"position": "Linkspopulismus, pro EU"
+			"name_x": "CEDEIA"
 		},
 		"5": {
 			"name": "Partía Ecologico Verta",
-			"name_x": "V",
-			"position": "Grüne Politik"
+			"name_x": "V"
 		},
 		"6": {
 			"name": "Partía Democratia Gocia",
-			"name_x": "PDG",
-			"position": "Demokatischer Sozialismus, EU Skepsis"
+			"name_x": "PDG"
 		},
 		"7":{
 			"name": "Allianza Pro la Sorvá",
-			"name_x": "APS",
-			"position": "Nationalliberalismus"
+			"name_x": "APS"
 		},
 		"8":{
 			"name": "Partía Liberale",
-			"name_x": "PL",
-			"position": "klassischer Liberalismus"
+			"name_x": "PL"
 		},
 		"9":{
 			"name": "Ensamblia pro L'Europa et Sorvá acon Volt",
-			"name_x": "EPES/Volt",
-			"position": "Paneuropäismus"
+			"name_x": "EPES/Volt"
 		},
 		"10":{
 			"name": "Paría Feminista et Equalitia",
-			"name_x": "PFE",
-			"position": "Feminismus, Minderheitsrechte"
+			"name_x": "PFE"
 		},
 		"11":{
 			"name": "Union Burgiora",
-			"name_x": "UB",
-			"position": "Konservativismus"
+			"name_x": "UB"
 		},
 		"12":{
 			"name": "Li Federalista",
-			"name_x": "FEZ",
-			"position": "Föderalismus"
+			"name_x": "FEZ"
 		},
 		"13":{
 			"name": "ANTI",
-			"name_x": "ANTI",
-			"position": "Populismus, Protest"
+			"name_x": "ANTI
 		},
 		"14":{
 			"name": "Partía Marxista",
-			"name_x": "PM",
-			"position": "Marxismus, Kommunismus"
+			"name_x": "PM"
 		},
 		"15":{
 			"name": "Nosta Patria",
-			"name_x": "NP",
-			"position": "Rechtsextremismus"
+			"name_x": "NP"
 		}
 	},
 	"answers": {
