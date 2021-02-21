@@ -1,143 +1,109 @@
 {
 	"theses": {
 		"0": {
-			"l": "EU: Sorvien sollte die Europäische Union verlassen.",
-			"s": "These 1",
+			"l": "Sorvien sollte die Europäische Union verlassen.",
+			"s": "Europa",
 			"x": "Sorvien sollte wie Großbritannien ein Referendum über einen Austritt aus der Europäischen Union durchführen"
 		},
 		"1": {
-			"l": "Militär: Die Verteidigungsausgaben sollten die Höchsten im Haushalt sein. ",
-			"s": "These 2",
+			"l": "Das Verteidigungsausgaben sollten die Höchsten im Haushalt sein.",
+			"s": "Militär",
 			"x": "Sorvien sollte seine Ausgaben für das Militär erhöhen."
 		},
 		"2": {
-			"l": "Föderalismus: Die Provinzen und Gemeinden sollten mehr Kompetenzen und Autonomie erhalten.",
-			"s": "These 3",
-			"x": "Sovien sollte sich von einem Nationalstaat zu einem föderalen System umwandeln."
+			"l": "Die Provinzen und Gemeinden sollten mehr Kompetenzen und Autonomie erhalten.",
+			"s": "Föderalismus",
+			"x": "Sorvien sollte sich von einem Nationalstaat zu einem föderalen System umwandeln."
 		},
 		"3": {
-			"l": "Gesundheit: Das Nationale Gesundheitssystem soll nicht privatisiert werden.",
-			"s": "These 4",
+			"l": "Das Nationale Gesundheitssystem soll nicht privatisiert werden.",
+			"s": "Gesundheit",
 			"x": "Das steuernfinazierte Nationale Gesundheitsystem sollte aufgelöst werden und über beitragsfinazierte Privatanbieter laufen."
 		},
 		"4": {
-			"l": "Rente: Die Rente sollte in einem Staatsfonds an der Börse angelegt werden.",
-			"s": "These 5",
+			"l": "Die Rente sollte in einem Staatsfonds an der Börse angelegt werden.",
+			"s": "Rente",
 			"x": "Nach norwegischem Vorbild sollten Rentengelder an der Börse angelegt werden um höhere Renten zu erzielen."
 		},
 		"5": {
-			"l": "Bürgerechte: Die Behördenaufsicht muss beibehalten werden.",
-			"s": "These 6",
+			"l": "Die Behördenaufsicht muss beibehalten werden.",
+			"s": "Bürgerechte",
 			"x": "Bei ungerechter Behandlung durch Beamten soll man sich weiterhin an die unabhängige Staatsanwaltschaft für Behördenkontrolle wenden können."
 		},
 		"6": {
-			"l": "Rundfunk: Der öffentlich Rechtliche Rundfunk (RDS) sollte weniger Budget erhalten",
-			"s": "These 7",
+			"l": "Der öffentlich Rechtliche Rundfunk (RDS) sollte weniger Budget erhalten",
+			"s": "Rundfunk",
 			"x": "Die Radio Diffusion Sorvegna soll weniger Geld für ihre Programme zur verfügung gestellt bekommen."
 		},
 		"7": {
-			"l": "These 8 invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eo",
-			"s": "These 8",
-			"x": "ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit a"
+			"l": "Der Mietmarkt sollte stärker reguliert werden.",
+			"s": "Mieten ",
+			"x": "Die Regierung sollte durch Subventionen, Wohnungsbau und Mietpreisbremsen in den Wohnungsmarkt eingreifen."
 		},
 		"8": {
-			"l": "These 9 imata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos",
-			"s": "These 9",
-			"x": ""
+			"l": "Im Radio gespielte Musik sollte eine bestimmte Quote an sorvisch sprachigen Texten erfüllen.",
+			"s": "Sprach-Quote",
+			"x": "Um sorvische Musik zu fördern und um die Identität der Hörer zu prägen sollte es eine Quote geben. "
 		},
 		"9": {
-			"l": "These 10 ergren, no sea takimata sanctus est Lorem ipsum dolor",
-			"s": "These 10",
-			"x": ""
+			"l": "Der Ausbau des Schienennetzes sollte stärker vorangetrieben werden als der Ausbau der Autobahnen.",
+			"s": "Infrastruktur",
+			"x": "Die nationale Eisenbahngesellschaft FerroSorvá sollte mehr Geld für ihre Bauprojekter erhalten als die nationale Autobahngesellschaft Autoviale.SV "
+		},
+		"10": {
+			"l": "Bodycam Aufnahmen der Sicherheitsbehörden sollten maximal 48 Stunden gespeichert werden.",
+			"s": "Sicherheit & Datenschutz",
+			"x": "Die Polizei (Policia Nationale) und die Nationalgarde (Guardia National) sollten die Aufnahmen von Bodycams nicht länger als 2 Speichern dürfen, wenn die Aufnahmen nicht Ermittlungsrelevant sind."
+		},
+		"11": {
+			"l": "Sorvien sollte bis 2030 auf regenerative Energien umgestiegen sein.",
+			"s": "Energieversorgung",
+			"x": "Das letzte Atomkraftwerk sollte bereits 2030 statt bisher geplant 2040 abgeschaltet werden und der Ausbau von Wind- Wasser- und Sonnenenergie beschleunigt werden."
 		}
 	},
 	"lists": {
 		"0": {
-			"name": "Partía Popular Sorvegno",
-			"name_x": "PPS",
-			"position": "liberaler Konservativismus"
+			"name": "Sorvische Volkspartei",
+			"name_x": "PPS"
 		},
 		"1": {
-			"name": "Partía Democratia",
-			"name_x": "PD",
-			"position": "Linksliberalismus"
+			"name": "Demokratische Partei",
+			"name_x": "PD"
 		},
 		"2": {
-			"name": "Partía Socialistica",
-			"name_x": "PS",
-			"position": "Sozialdemokratie"
+			"name": "Sozialistische Partei",
+			"name_x": "PS"
 		},
 		"3": {
-			"name": "Libertea Servegno",
-			"name_x": "LS",
-			"position": "Rechtspopulismus, EU Skepsis"
+			"name": "Sorvische Freiheit",
+			"name_x": "LS"
 		},
 		"4": {
-			"name": "Cedeia la Republica",
-			"name_x": "CEDEIA",
-			"position": "Linkspopulismus, pro EU"
+			"name": "Ökologische Partei Grüne",
+			"name_x": "V"
 		},
 		"5": {
-			"name": "Partía Ecologico Verta",
-			"name_x": "V",
-			"position": "Grüne Politik"
+			"name": "Linksdemokratische Partei",
+			"name_x": "PDG"
 		},
 		"6": {
-			"name": "Partía Democratia Gocia",
-			"name_x": "PDG",
-			"position": "Demokatischer Sozialismus, EU Skepsis"
+			"name": "Allianz für Sorvien",
+			"name_x": "APS"
 		},
-		"7":{
-			"name": "Allianza Pro la Sorvá",
-			"name_x": "APS",
-			"position": "Nationalliberalismus"
+		"7": {
+			"name": "Republik im Umbruch",
+			"name_x": "CEDEIA"
 		},
-		"8":{
-			"name": "Partía Liberale",
-			"name_x": "PL",
-			"position": "klassischer Liberalismus"
-		},
-		"9":{
-			"name": "Ensamblia pro L'Europa et Sorvá acon Volt",
-			"name_x": "EPES/Volt",
-			"position": "Paneuropäismus"
-		},
-		"10":{
-			"name": "Paría Feminista et Equalitia",
-			"name_x": "PFE",
-			"position": "Feminismus, Minderheitsrechte"
-		},
-		"11":{
-			"name": "Union Burgiora",
-			"name_x": "UB",
-			"position": "Konservativismus"
-		},
-		"12":{
-			"name": "Li Federalista",
-			"name_x": "FEZ",
-			"position": "Föderalismus"
-		},
-		"13":{
-			"name": "ANTI",
-			"name_x": "ANTI",
-			"position": "Populismus, Protest"
-		},
-		"14":{
-			"name": "Partía Marxista",
-			"name_x": "PM",
-			"position": "Marxismus, Kommunismus"
-		},
-		"15":{
-			"name": "Nosta Patria",
-			"name_x": "NP",
-			"position": "Rechtsextremismus"
+		"8": {
+			"name": "Volt/Gemeinsam für Europa und Sorvien",
+			"name_x": "Volt/EPES"
 		}
 	},
 	"answers": {
-		"0": { //PPS
+		"0": {
 			"0": {
-				"selection": "b",
-				"statement": ""
+				"selection": "c",
+				"statement": "Gemeinsam ist Europa stärker."
 			},
 			"1": {
 				"selection": "a",
@@ -148,61 +114,19 @@
 				"statement": ""
 			},
 			"3": {
-				"selection": "b",
-				"statement": ""
-			},
-			"4": {
-				"selection": "a",
-				"statement": ""
-			},
-			"5": {
-				"selection": "b",
-				"statement": ""
-			},
-			"6": {
-				"selection": "b",
-				"statement": ""
-			},
-			"7": {
-				"selection": "b",
-				"statement": ""
-			},
-			"8": {
-				"selection": "a",
-				"statement": ""
-			},
-			"9": {
-				"selection": "a",
-				"statement": ""
-			}
-		},
-		"1": { //PD
-			"0": {
-				"selection": "b",
-				"statement": ""
-			},
-			"1": {
-				"selection": "b",
-				"statement": ""
-			},
-			"2": {
-				"selection": "b",
-				"statement": ""
-			},
-			"3": {
 				"selection": "a",
 				"statement": ""
 			},
 			"4": {
-				"selection": "a",
+				"selection": "c",
 				"statement": ""
 			},
 			"5": {
-				"selection": "a",
+				"selection": "c",
 				"statement": ""
 			},
 			"6": {
-				"selection": "b",
+				"selection": "c",
 				"statement": ""
 			},
 			"7": {
@@ -210,117 +134,41 @@
 				"statement": ""
 			},
 			"8": {
+				"selection": "a",
+				"statement": ""
+			},
+			"9": {
 				"selection": "c",
 				"statement": ""
 			},
-			"9": {
-				"selection": "a",
-				"statement": ""
-			}
-		},
-		"2": { //PS
-			"0": {
-				"selection": "b",
-				"statement": ""
-			},
-			"1": {
-				"selection": "b",
-				"statement": ""
-			},
-			"2": {
-				"selection": "b", //d
-				"statement": ""
-			},
-			"3": {
-				"selection": "b",
-				"statement": ""
-			},
-			"4": {
-				"selection": "b",
-				"statement": ""
-			},
-			"5": {
-				"selection": "a",
-				"statement": ""
-			},
-			"6": {
-				"selection": "b",
-				"statement": ""
-			},
-			"7": {
-				"selection": "a",
-				"statement": ""
-			},
-			"8": {
-				"selection": "a",
-				"statement": ""
-			},
-			"9": {
-				"selection": "a",
-				"statement": ""
-			}
-		},
-		"3": { //LS
-			"0": {
-				"selection": "a",
-				"statement": ""
-			},
-			"1": {
-				"selection": "a",
-				"statement": ""
-			},
-			"2": {
-				"selection": "b",
-				"statement": ""
-			},
-			"3": {
-				"selection": "b",
-				"statement": ""
-			},
-			"4": {
-				"selection": "a",
-				"statement": ""
-			},
-			"5": {
-				"selection": "b",
-				"statement": ""
-			},
-			"6": {
-				"selection": "a",
-				"statement": ""
-			},
-			"7": {
+			"10": {
 				"selection": "c",
 				"statement": ""
 			},
-			"8": {
-				"selection": "b",
-				"statement": ""
-			},
-			"9": {
+			"11": {
 				"selection": "c",
 				"statement": ""
 			}
 		},
-		"4": { //cedeia
+		"1": {
 			"0": {
-				"selection": "b",
+				"selection": "c",
 				"statement": ""
 			},
 			"1": {
-				"selection": "b",
+				"selection": "c",
 				"statement": ""
 			},
 			"2": {
-				"selection": "b",
+				"selection": "c",
 				"statement": ""
 			},
 			"3": {
-				"selection": "b",
+				"selection": "a",
 				"statement": ""
 			},
 			"4": {
-				"selection": "b",
+				"selection": "a",
 				"statement": ""
 			},
 			"5": {
@@ -328,7 +176,7 @@
 				"statement": ""
 			},
 			"6": {
-				"selection": "b",
+				"selection": "c",
 				"statement": ""
 			},
 			"7": {
@@ -336,358 +184,80 @@
 				"statement": ""
 			},
 			"8": {
-				"selection": "a",
+				"selection": "c",
 				"statement": ""
 			},
 			"9": {
+				"selection": "a",
+				"statement": ""
+			},
+			"10": {
+				"selection": "a",
+				"statement": ""
+			},
+			"11": {
+				"selection": "c",
+				"statement": "Zur Überbrückung muss mindestens ein Kraftwerk noch eine Weile am Netz bleiben. 2030 ganz Abzuschlten ist utopisch."
+			}
+		},
+		"2": {
+			"0": {
+				"selection": "c",
+				"statement": ""
+			},
+			"1": {
+				"selection": "c",
+				"statement": ""
+			},
+			"2": {
+				"selection": "c",
+				"statement": ""
+			},
+			"3": {
+				"selection": "a",
+				"statement": ""
+			},
+			"4": {
+				"selection": "c",
+				"statement": ""
+			},
+			"5": {
+				"selection": "a",
+				"statement": ""
+			},
+			"6": {
+				"selection": "c",
+				"statement": ""
+			},
+			"7": {
+				"selection": "a",
+				"statement": ""
+			},
+			"8": {
+				"selection": "c",
+				"statement": ""
+			},
+			"9": {
+				"selection": "b",
+				"statement": "Beides sollte gleichermaßen vorangetrieben werden."
+			},
+			"10": {
+				"selection": "c",
+				"statement": ""
+			},
+			"11": {
 				"selection": "a",
 				"statement": ""
 			}
 		},
-		"5": { //v
-			"0": {
-				"selection": "b",
-				"statement": ""
-			},
-			"1": {
-				"selection": "b",
-				"statement": ""
-			},
-			"2": {
-				"selection": "a",
-				"statement": ""
-			},
-			"3": {
-				"selection": "b",
-				"statement": ""
-			},
-			"4": {
-				"selection": "b",
-				"statement": ""
-			},
-			"5": {
-				"selection": "a",
-				"statement": ""
-			},
-			"6": {
-				"selection": "b",
-				"statement": ""
-			},
-			"7": {
-				"selection": "c",
-				"statement": ""
-			},
-			"8": {
-				"selection": "a",
-				"statement": ""
-			},
-			"9": {
-				"selection": "a",
-				"statement": ""
-			}
-		},
-		"6":{ //pdg
-			"0": {
-				"selection": "a",
-				"statement": ""
-			},
-			"1": {
-				"selection": "b",
-				"statement": "Noe."
-			},
-			"2": {
-				"selection": "a", 
-				"statement": ""
-			},
-			"3": {
-				"selection": "b",
-				"statement": ""
-			},
-			"4": {
-				"selection": "b",
-				"statement": ""
-			},
-			"5": {
-				"selection": "a",
-				"statement": ""
-			},
-			"6": {
-				"selection": "a",
-				"statement": ""
-			},
-			"7": {
-				"selection": "b",
-				"statement": ""
-			},
-			"8": {
-				"selection": "a",
-				"statement": ""
-			},
-			"9": {
-				"selection": "a",
-				"statement": ""
-			}
-		},
-		"7": { //aps
+		"3": {
 			"0": {
 				"selection": "a",
 				"statement": ""
 			},
 			"1": {
 				"selection": "a",
-				"statement": "Noe."
-			},
-			"2": {
-				"selection": "a",
 				"statement": ""
-			},
-			"3": {
-				"selection": "a",
-				"statement": ""
-			},
-			"4": {
-				"selection": "a",
-				"statement": ""
-			},
-			"5": {
-				"selection": "b",
-				"statement": ""
-			},
-			"6": {
-				"selection": "a",
-				"statement": ""
-			},
-			"7": {
-				"selection": "b",
-				"statement": ""
-			},
-			"8": {
-				"selection": "a",
-				"statement": ""
-			},
-			"9": {
-				"selection": "a",
-				"statement": ""
-			}
-		},
-		"8":{ //pl
-			"0": {
-				"selection": "b",
-				"statement": ""
-			},
-			"1": {
-				"selection": "a",
-				"statement": "Noe."
-			},
-			"2": {
-				"selection": "a",
-				"statement": ""
-			},
-			"3": {
-				"selection": "a",
-				"statement": ""
-			},
-			"4": {
-				"selection": "a",
-				"statement": ""
-			},
-			"5": {
-				"selection": "b",
-				"statement": ""
-			},
-			"6": {
-				"selection": "a",
-				"statement": ""
-			},
-			"7": {
-				"selection": "b",
-				"statement": ""
-			},
-			"8": {
-				"selection": "a",
-				"statement": ""
-			},
-			"9": {
-				"selection": "a",
-				"statement": ""
-			}
-		},
-		"9":{ //epes, volt
-			"0": {
-				"selection": "b",
-				"statement": ""
-			},
-			"1": {
-				"selection": "b",
-				"statement": "Noe."
-			},
-			"2": {
-				"selection": "b",
-				"statement": ""
-			},
-			"3": {
-				"selection": "b",
-				"statement": ""
-			},
-			"4": {
-				"selection": "a",
-				"statement": ""
-			},
-			"5": {
-				"selection": "a",
-				"statement": ""
-			},
-			"6": {
-				"selection": "b",
-				"statement": ""
-			},
-			"7": {
-				"selection": "b",
-				"statement": ""
-			},
-			"8": {
-				"selection": "a",
-				"statement": ""
-			},
-			"9": {
-				"selection": "a",
-				"statement": ""
-			}
-		},
-		"10":{ //pfe
-			"0": {
-				"selection": "b",
-				"statement": ""
-			},
-			"1": {
-				"selection": "b",
-				"statement": "Noe."
-			},
-			"2": {
-				"selection": "a",
-				"statement": ""
-			},
-			"3": {
-				"selection": "b",
-				"statement": ""
-			},
-			"4": {
-				"selection": "b",
-				"statement": ""
-			},
-			"5": {
-				"selection": "a",
-				"statement": ""
-			},
-			"6": {
-				"selection": "b",
-				"statement": ""
-			},
-			"7": {
-				"selection": "b",
-				"statement": ""
-			},
-			"8": {
-				"selection": "a",
-				"statement": ""
-			},
-			"9": {
-				"selection": "a",
-				"statement": ""
-			}
-		},
-		"11":{ //ub
-			"0": {
-				"selection": "c",
-				"statement": ""
-			},
-			"1": {
-				"selection": "a",
-				"statement": ""
-			},
-			"2": {
-				"selection": "a",
-				"statement": ""
-			},
-			"3": {
-				"selection": "a",
-				"statement": ""
-			},
-			"4": {
-				"selection": "a",
-				"statement": ""
-			},
-			"5": {
-				"selection": "b",
-				"statement": ""
-			},
-			"6": {
-				"selection": "a",
-				"statement": ""
-			},
-			"7": {
-				"selection": "b",
-				"statement": ""
-			},
-			"8": {
-				"selection": "a",
-				"statement": ""
-			},
-			"9": {
-				"selection": "a",
-				"statement": ""
-			}
-		},
-		"12":{ //fez
-			"0": {
-				"selection": "c",
-				"statement": ""
-			},
-			"1": {
-				"selection": "b",
-				"statement": ""
-			},
-			"2": {
-				"selection": "a",
-				"statement": ""
-			},
-			"3": {
-				"selection": "a",
-				"statement": ""
-			},
-			"4": {
-				"selection": "b",
-				"statement": ""
-			},
-			"5": {
-				"selection": "c",
-				"statement": ""
-			},
-			"6": {
-				"selection": "a",
-				"statement": ""
-			},
-			"7": {
-				"selection": "b",
-				"statement": ""
-			},
-			"8": {
-				"selection": "a",
-				"statement": ""
-			},
-			"9": {
-				"selection": "a",
-				"statement": ""
-			}
-		},
-		"13":{ //anti
-			"0": {
-				"selection": "c",
-				"statement": ""
-			},
-			"1": {
-				"selection": "c",
-				"statement": "Noe."
 			},
 			"2": {
 				"selection": "c",
@@ -706,7 +276,7 @@
 				"statement": ""
 			},
 			"6": {
-				"selection": "c",
+				"selection": "a",
 				"statement": ""
 			},
 			"7": {
@@ -714,33 +284,41 @@
 				"statement": ""
 			},
 			"8": {
-				"selection": "c",
+				"selection": "a",
 				"statement": ""
 			},
 			"9": {
+				"selection": "c",
+				"statement": ""
+			},
+			"10": {
+				"selection": "c",
+				"statement": ""
+			},
+			"11": {
 				"selection": "c",
 				"statement": ""
 			}
 		},
-		"14":{ //pm
+		"4": {
 			"0": {
-				"selection": "b",
+				"selection": "c",
 				"statement": ""
 			},
 			"1": {
-				"selection": "b",
-				"statement": "Noe."
+				"selection": "c",
+				"statement": ""
 			},
 			"2": {
-				"selection": "b",
+				"selection": "a",
 				"statement": ""
 			},
 			"3": {
-				"selection": "b",
+				"selection": "a",
 				"statement": ""
 			},
 			"4": {
-				"selection": "b",
+				"selection": "a",
 				"statement": ""
 			},
 			"5": {
@@ -748,45 +326,53 @@
 				"statement": ""
 			},
 			"6": {
-				"selection": "a",
+				"selection": "c",
 				"statement": ""
 			},
 			"7": {
-				"selection": "b",
-				"statement": ""
-			},
-			"8": {
 				"selection": "a",
 				"statement": ""
 			},
+			"8": {
+				"selection": "c",
+				"statement": ""
+			},
 			"9": {
+				"selection": "a",
+				"statement": ""
+			},
+			"10": {
+				"selection": "a",
+				"statement": ""
+			},
+			"11": {
 				"selection": "a",
 				"statement": ""
 			}
 		},
-		"15":{ //np
+		"5": {
 			"0": {
 				"selection": "a",
 				"statement": ""
 			},
 			"1": {
-				"selection": "a",
-				"statement": "Noe."
+				"selection": "c",
+				"statement": ""
 			},
 			"2": {
-				"selection": "b",
+				"selection": "c",
 				"statement": ""
 			},
 			"3": {
-				"selection": "b",
+				"selection": "a",
 				"statement": ""
 			},
 			"4": {
-				"selection": "b",
+				"selection": "c",
 				"statement": ""
 			},
 			"5": {
-				"selection": "b",
+				"selection": "a",
 				"statement": ""
 			},
 			"6": {
@@ -794,7 +380,57 @@
 				"statement": ""
 			},
 			"7": {
-				"selection": "b",
+				"selection": "a",
+				"statement": ""
+			},
+			"8": {
+				"selection": "c",
+				"statement": ""
+			},
+			"9": {
+				"selection": "a",
+				"statement": ""
+			},
+			"10": {
+				"selection": "a",
+				"statement": ""
+			},
+			"11": {
+				"selection": "c",
+				"statement": ""
+			}
+		},
+		"6": {
+			"0": {
+				"selection": "a",
+				"statement": ""
+			},
+			"1": {
+				"selection": "a",
+				"statement": ""
+			},
+			"2": {
+				"selection": "a",
+				"statement": ""
+			},
+			"3": {
+				"selection": "c",
+				"statement": ""
+			},
+			"4": {
+				"selection": "a",
+				"statement": ""
+			},
+			"5": {
+				"selection": "c",
+				"statement": ""
+			},
+			"6": {
+				"selection": "a",
+				"statement": ""
+			},
+			"7": {
+				"selection": "c",
 				"statement": ""
 			},
 			"8": {
@@ -802,6 +438,114 @@
 				"statement": ""
 			},
 			"9": {
+				"selection": "c",
+				"statement": ""
+			},
+			"10": {
+				"selection": "a",
+				"statement": ""
+			},
+			"11": {
+				"selection": "c",
+				"statement": ""
+			}
+		},
+		"7": {
+			"0": {
+				"selection": "c",
+				"statement": ""
+			},
+			"1": {
+				"selection": "c",
+				"statement": ""
+			},
+			"2": {
+				"selection": "c",
+				"statement": ""
+			},
+			"3": {
+				"selection": "a",
+				"statement": ""
+			},
+			"4": {
+				"selection": "c",
+				"statement": ""
+			},
+			"5": {
+				"selection": "a",
+				"statement": ""
+			},
+			"6": {
+				"selection": "c",
+				"statement": ""
+			},
+			"7": {
+				"selection": "a",
+				"statement": ""
+			},
+			"8": {
+				"selection": "c",
+				"statement": ""
+			},
+			"9": {
+				"selection": "a",
+				"statement": ""
+			},
+			"10": {
+				"selection": "a",
+				"statement": ""
+			},
+			"11": {
+				"selection": "a",
+				"statement": ""
+			}
+		},
+		"8": {
+			"0": {
+				"selection": "c",
+				"statement": ""
+			},
+			"1": {
+				"selection": "c",
+				"statement": ""
+			},
+			"2": {
+				"selection": "c",
+				"statement": ""
+			},
+			"3": {
+				"selection": "a",
+				"statement": ""
+			},
+			"4": {
+				"selection": "a",
+				"statement": ""
+			},
+			"5": {
+				"selection": "a",
+				"statement": ""
+			},
+			"6": {
+				"selection": "c",
+				"statement": ""
+			},
+			"7": {
+				"selection": "a",
+				"statement": ""
+			},
+			"8": {
+				"selection": "c",
+				"statement": ""
+			},
+			"9": {
+				"selection": "a",
+				"statement": ""
+			},
+			"10": {
+				"selection": "a",
+				"statement": ""
+			},
+			"11": {
 				"selection": "a",
 				"statement": ""
 			}
